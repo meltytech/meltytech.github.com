@@ -52,3 +52,74 @@
 </body>
 
 </html>
+Описание ключевых элементов:
+Material Web — библиотека компонентов Material Design 3 на основе Web Components.
+md-filled-button и md-outlined-button — компоненты кнопок Material Design 3.
+Стили — для настройки базовых элементов, таких как заголовки, фон и текст.
+Этот шаблон можно расширить, добавив больше компонентов из Material Web, таких как карточки, навигационные панели и другие элементы, доступные в Material Design 3.
+
+
+
+
+
+
+Вы сказали:
+код карточки для этой страницы в один столбец
+ChatGPT сказал:
+ChatGPT
+Вот пример кода карточки (card) для Material Design 3, который можно добавить в ваш шаблон, чтобы вывести карточки в один столбец:
+
+html
+Копировать код
+<main>
+    <h2>Пример статической страницы</h2>
+    <p>Это пример простой стартовой страницы, использующей Material Design 3.</p>
+
+    <md-filled-button label="Нажми меня"></md-filled-button>
+    <md-outlined-button label="Другой вариант"></md-outlined-button>
+
+    <section class="card-container">
+        <md-elevated-card class="md-card">
+            <h3>Заголовок карточки</h3>
+            <p>Это пример карточки в стиле Material Design 3. Она имеет тень и приподнятие над фоном.</p>
+            <md-filled-button label="Узнать больше"></md-filled-button>
+        </md-elevated-card>
+
+        <md-elevated-card class="md-card">
+            <h3>Вторая карточка</h3>
+            <p>Еще один пример карточки. Карточки можно использовать для отображения информации и действий.</p>
+            <md-outlined-button label="Подробнее"></md-outlined-button>
+        </md-elevated-card>
+    </section>
+</main>
+
+<style>
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .md-card {
+        width: 300px;
+        padding: 1rem;
+        text-align: center;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    md-elevated-card {
+        box-shadow: var(--md-sys-elevation-3, 0px 1px 3px rgba(0, 0, 0, 0.2));
+    }
+
+    .md-card h3 {
+        margin: 0.5rem 0;
+    }
+
+    .md-card p {
+        margin: 1rem 0;
+        color: #333;
+    }
+</style>
