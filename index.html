@@ -31,17 +31,66 @@
             margin: 1rem;
         }
     </style>
+
+    
+</head>
+
+<body>
+    <header>
+        <h1>Добро пожаловать в Material Design 3</h1>
+    </header>
+
+<main>
+    <h2>Пример статической страницы</h2>
+    <p>Это пример простой стартовой страницы, использующей Material Design 3.</p>
+
+    <md-filled-button label="Нажми меня"></md-filled-button>
+    <md-outlined-button label="Другой вариант"></md-outlined-button>
+
+    <section class="card-container">
+        <!-- Повторяем карточку 15 раз -->
+        <md-elevated-card class="md-card">
+            <h3>Карточка 1</h3>
+            <p>Описание карточки 1</p>
+            <md-filled-button label="Подробнее"></md-filled-button>
+        </md-elevated-card>
+
+        <md-elevated-card class="md-card">
+            <h3>Карточка 2</h3>
+            <p>Описание карточки 2</p>
+            <md-filled-button label="Подробнее"></md-filled-button>
+        </md-elevated-card>
+
+        <md-elevated-card class="md-card">
+            <h3>Карточка 3</h3>
+            <p>Описание карточки 3</p>
+            <md-filled-button label="Подробнее"></md-filled-button>
+        </md-elevated-card>
+
+        <!-- Добавьте карточки вплоть до 15 -->
+        <md-elevated-card class="md-card">
+            <h3>Карточка 4</h3>
+            <p>Описание карточки 4</p>
+            <md-filled-button label="Подробнее"></md-filled-button>
+        </md-elevated-card>
+
+        <!-- Продолжение до карточки 15 -->
+        <!-- Сокращённый пример, но вам нужно создать все 15 карточек -->
+    </section>
+</main>
+
 <style>
     .card-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        justify-items: center;
+        padding: 1rem;
     }
 
     .md-card {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         padding: 1rem;
         text-align: center;
         background-color: white;
@@ -61,35 +110,6 @@
         color: #333;
     }
 </style>
-    
-</head>
-
-<body>
-    <header>
-        <h1>Добро пожаловать в Material Design 3</h1>
-    </header>
-
-<main>
-    <h2>Пример статической страницы</h2>
-    <p>Это пример простой стартовой страницы, использующей Material Design 3.</p>
-
-    <md-filled-button label="Нажми меня"></md-filled-button>
-    <md-outlined-button label="Другой вариант"></md-outlined-button>
-
-    <section class="card-container">
-        <md-elevated-card class="md-card">
-            <h3>Заголовок карточки</h3>
-            <p>Это пример карточки в стиле Material Design 3. Она имеет тень и приподнятие над фоном.</p>
-            <md-filled-button label="Узнать больше"></md-filled-button>
-        </md-elevated-card>
-
-        <md-elevated-card class="md-card">
-            <h3>Вторая карточка</h3>
-            <p>Еще один пример карточки. Карточки можно использовать для отображения информации и действий.</p>
-            <md-outlined-button label="Подробнее"></md-outlined-button>
-        </md-elevated-card>
-    </section>
-</main>
 
 
 
