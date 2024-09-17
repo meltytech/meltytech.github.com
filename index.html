@@ -39,7 +39,37 @@
     <header>
         <h1>Добро пожаловать в Material Design 3</h1>
     </header>
+<style>
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        justify-items: center;
+        padding: 1rem;
+    }
 
+    .md-card {
+        width: 100%;
+        max-width: 300px;
+        padding: 1rem;
+        text-align: center;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    md-elevated-card {
+        box-shadow: var(--md-sys-elevation-3, 0px 1px 3px rgba(0, 0, 0, 0.2));
+    }
+
+    .md-card h3 {
+        margin: 0.5rem 0;
+    }
+
+    .md-card p {
+        margin: 1rem 0;
+        color: #333;
+    }
+</style>
 <main>
     <h2>Пример статической страницы</h2>
     <p>Это пример простой стартовой страницы, использующей Material Design 3.</p>
@@ -79,37 +109,7 @@
     </section>
 </main>
 
-<style>
-    .card-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1rem;
-        justify-items: center;
-        padding: 1rem;
-    }
 
-    .md-card {
-        width: 100%;
-        max-width: 300px;
-        padding: 1rem;
-        text-align: center;
-        background-color: white;
-        border-radius: 8px;
-    }
-
-    md-elevated-card {
-        box-shadow: var(--md-sys-elevation-3, 0px 1px 3px rgba(0, 0, 0, 0.2));
-    }
-
-    .md-card h3 {
-        margin: 0.5rem 0;
-    }
-
-    .md-card p {
-        margin: 1rem 0;
-        color: #333;
-    }
-</style>
 
 
 
