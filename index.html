@@ -1,155 +1,95 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material Design 3 Стартовая Страница</title>
-    <script type="module" src="https://unpkg.com/@material/web@latest/material-web.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
-    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google" content="notranslate">
+    <title>Hello world</title>
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.7.8/dist/cdn/beer.min.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.8/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+  </head>
+  <body class="dark">
+    <nav class="left drawer l">
+      <header>
+        <nav>
+          <img src="https://www.beercss.com/favicon.png" class="circle">
+          <h6>Cheers</h6>
+        </nav>
+      </header>
+      <a>
+        <i>home</i>
+        <div>Home</div>
+      </a>
+      <a>
+        <i>search</i>
+        <div>Search</div>
+      </a>
+      <a>
+        <i>share</i>
+        <div>Share</div>
+      </a>
+      <a>
+        <i>more_vert</i>
+        <div>More</div>
+      </a>
+      <div class="divider"></div>
+      <label>Label</label>
+      <a>
+        <i>widgets</i>
+        <div>Widgets</div>
+      </a>
+      <a>
+        <i>chat</i>
+        <div>Chat</div>
+      </a>
+      <a>
+        <i>help</i>
+        <div>Help</div>
+      </a>  
+    </nav>
 
+    <nav class="left m">
+      <header>
+        <img src="https://www.beercss.com/favicon.png" class="circle">
+      </header>
+      <a>
+        <i>home</i>
+        <div>Home</div>
+      </a>
+      <a>
+        <i>search</i>
+        <div>Search</div>
+      </a>
+      <a>
+        <i>share</i>
+        <div>Share</div>
+      </a>
+      <a>
+        <i>more_vert</i>
+        <div>More</div>
+      </a>
+    </nav>
 
+    <nav class="bottom s">
+      <a>
+        <i>home</i>
+      </a>
+      <a>
+        <i>search</i>
+      </a>
+      <a>
+        <i>share</i>
+      </a>
+      <a>
+        <i>more_vert</i>
+      </a>
+    </nav>
 
-
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
-p {
-  line-height: 24px;
-  margin-bottom: 16px;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Google Sans, sans-serif;
-}
-.md3-navigation-rail {
-  width: 80px;
-  position: fixed;
-  background: #FEF7FF;
-  height: 100%;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  padding: 4px;
-  padding-top: 16px;
-  overflow-y: scroll;
-}
-.md3-navigation-rail-item {
-  width: 100%;
-  line-height: 16px;
-  cursor: pointer;
-  border: none;
-  background: none;
-  outline: 0;
-  margin-bottom: 12px;
-  color: #1D1B20;
-}
-.md3-navigation-rail-item:hover .md3-navigation-rail-icon {
-  background: rgba(29, 27, 32, .08);
-}
-.md3-navigation-rail-item:active .md3-navigation-rail-icon {
-  background: rgba(29, 27, 32, .1);
-}
-.md3-navigation-rail-item.active {
-  .md3-navigation-rail-label {
-    color: #1D1B20;
-    font-weight: bold;
-  }
-  .md3-navigation-rail-icon {
-    background: #E8DEF8;
-  }
-}
-.md3-navigation-rail-icon {
-  justify-content: center;
-  width: 56px;
-  height: 32px;
-  padding: 4px;
-  border-radius: 28px;
-  margin-bottom: 4px;
-}
-.md3-navigation-rail-label {
-  color: #49454F;
-  font-weight: 500;
-  font-size: 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.md3-fab {
-  background: #EADDFF;
-  border: none;
-  outline: 0;
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  cursor: pointer;
-}
-.md3-navigation-rail .md3-fab {
-  margin-bottom: 24px;
-  color: #4F378B;
-}
-
-
-
-
-
-
-        
-    </style>
-
-    
-</head>
-
-<body>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<nav class="md3-navigation-rail">
-  <button class="md3-fab">
-    <span class="md3-navigation-rail-icon material-symbols-outlined">add</span>
-   </button>
-  <button class="md3-navigation-rail-item active">
-    <span class="md3-navigation-rail-icon material-symbols-outlined">home</span>
-    <div class="md3-navigation-rail-label">Home</div>
-  </button>
-  <button class="md3-navigation-rail-item">
-    <span class="md3-navigation-rail-icon material-symbols-outlined">apps</span>
-    <div class="md3-navigation-rail-label">Get started</div>
-  </button>
-  <button class="md3-navigation-rail-item">
-    <span class="md3-navigation-rail-icon material-symbols-outlined">palette</span>
-    <div class="md3-navigation-rail-label">Styles</div>
-  </button>
-  <button class="md3-navigation-rail-item">
-    <span class="md3-navigation-rail-icon material-symbols-outlined">book</span>
-    <div class="md3-navigation-rail-label">Foundations</div>
-  </button>
-  <button class="md3-navigation-rail-item">
-    <span class="md3-navigation-rail-icon material-symbols-outlined">add_circle</span>
-    <div class="md3-navigation-rail-label">Components</div>
-  </button>
-  <button class="md3-navigation-rail-item">
-    <span class="md3-navigation-rail-icon material-symbols-outlined">settings</span>
-    <div class="md3-navigation-rail-label">Settings</div>
-  </button>
-  <button class="md3-navigation-rail-item">
-    <span class="md3-navigation-rail-icon material-symbols-outlined">more_horiz</span>
-    <div class="md3-navigation-rail-label">More</div>
-  </button>
-</nav>
-<div style="margin-left: 88px; padding: 20px;">
-  <h2>Content here</h2>
-  <p>Scroll the page of the fixed navigation rail.</p>
-  <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum mi faucibus nec dis nullam odio lacus. Pretium hac sollicitudin diam nibh penatibus nulla dis. Nullam non per facilisi enim nibh fusce leo. Dis mus elementum penatibus orci duis; porttitor sem quis. Scelerisque lobortis ante ullamcorper mus convallis erat nisl cursus. Lacinia potenti senectus, enim viverra semper sagittis mauris?</p>
-  <p>Nunc suspendisse hac morbi est maecenas libero dignissim. In sed placerat nam aliquet volutpat duis himenaeos. Augue facilisi tristique taciti porta posuere ex? Velit tellus fermentum interdum donec a. Vitae quis posuere faucibus dis suscipit habitasse ut. Auctor diam interdum praesent lacus facilisis placerat vel pellentesque. Aliquam mauris duis ante ullamcorper; elementum porta luctus. Fringilla eros vehicula nostra metus ultricies vestibulum. Lobortis inceptos aliquet aenean suscipit parturient efficitur donec senectus.</p>
-  <p>Montes suspendisse erat iaculis ultrices libero. Aa nisl; fusce aenean posuere facilisis. Curabitur dictum a dis imperdiet mattis nam. Molestie cras aptent ut mauris aptent fames neque. Magnis commodo tempus augue sagittis class finibus lacinia phasellus. Urna hendrerit ridiculus facilisi sed, adipiscing sit dignissim. Magnis habitasse litora vulputate, suspendisse ac donec praesent leo? Arcu sodales pretium fusce habitant sociosqu fames. Nibh erat fringilla habitasse risus hendrerit nibh torquent maecenas.</p>
-  <p>Ac malesuada erat ad platea convallis sagittis magna id. Laoreet porta lacinia sodales dictumst torquent molestie bibendum nam. Sapien aliquam lacinia dapibus nulla dapibus nisl tellus non. Sollicitudin magnis erat leo dictum vehicula facilisis fusce eget. Integer arcu justo facilisis; viverra curae class. Curabitur integer nec nullam; commodo ridiculus ridiculus aptent. Habitant fames egestas himenaeos himenaeos vel himenaeos. Litora dictumst sit sodales semper curae amet elementum dolor. Amet venenatis maximus quis cubilia tellus. Pharetra ex dui aenean class amet eleifend non ipsum?</p>
-  <p>Vehicula parturient mus erat ornare platea pulvinar hendrerit. Torquent magna massa facilisis efficitur dictum primis. Aliquam consequat accumsan a lobortis platea sodales cursus enim. Consectetur purus dis lacus quam diam urna aenean nisl. Ullamcorper in inceptos, habitasse ligula tristique fringilla. Eleifend blandit penatibus gravida dictum pretium libero efficitur nulla sed. Morbi volutpat volutpat suscipit neque ex natoque.</p>
-</div>
-</body>
-
+    <main class="responsive">
+      <img src="https://www.beercss.com/beer-and-woman.svg" class="responsive round">
+      <h3>Welcome</h3>
+      <h5>The beer is ready!</h5>
+    </main>
+  </body>
 </html>
