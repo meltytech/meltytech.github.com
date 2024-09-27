@@ -1,0 +1,541 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google" content="notranslate">
+    <title>MELTY</title>
+	  <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.7.8/dist/cdn/beer.min.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.8/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+  
+  
+   <style>
+
+
+
+ :root,
+body.light {
+--primary:#8e4f00;
+--on-primary:#ffffff;
+--primary-container:#ffdcc1;
+--on-primary-container:#2e1500;
+--secondary:#735943;
+--on-secondary:#ffffff;
+--secondary-container:#ffdcc1;
+--on-secondary-container:#2a1706;
+--tertiary:#5a6238;
+--on-tertiary:#ffffff;
+--tertiary-container:#dfe8b2;
+--on-tertiary-container:#181e00;
+--error:#ba1a1a;
+--on-error:#ffffff;
+--error-container:#ffdad6;
+--on-error-container:#410002;
+--background:#fffbff;
+--on-background:#201b17;
+--surface:#fff8f5;
+--on-surface:#201b17;
+--surface-variant:#f2dfd1;
+--on-surface-variant:#51443a;
+--outline:#837469;
+--outline-variant:#d6c3b6;
+--shadow:#000000;
+--scrim:#000000;
+--inverse-surface:#352f2b;
+--inverse-on-surface:#faefe8;
+--inverse-primary:#ffb878;
+--surface-dim:#e3d8d1;
+--surface-bright:#fff8f5;
+--surface-container-lowest:#ffffff;
+--surface-container-low:#fdf1ea;
+--surface-container:#f7ece5;
+--surface-container-high:#f1e6df;
+--surface-container-highest:#ece0da;
+}
+
+body.dark {
+  --primary:#ffb878;
+--on-primary:#4c2700;
+--primary-container:#6c3a00;
+--on-primary-container:#ffdcc1;
+--secondary:#e2c0a5;
+--on-secondary:#412c19;
+--secondary-container:#5a422d;
+--on-secondary-container:#ffdcc1;
+--tertiary:#c3cb98;
+--on-tertiary:#2d330e;
+--tertiary-container:#434a23;
+--on-tertiary-container:#dfe8b2;
+--error:#ffb4ab;
+--on-error:#690005;
+--error-container:#93000a;
+--on-error-container:#ffb4ab;
+--background:#201b17;
+--on-background:#ece0da;
+--surface:#17120f;
+--on-surface:#ece0da;
+--surface-variant:#51443a;
+--on-surface-variant:#d6c3b6;
+--outline:#9e8e82;
+--outline-variant:#51443a;
+--shadow:#000000;
+--scrim:#000000;
+--inverse-surface:#ece0da;
+--inverse-on-surface:#352f2b;
+--inverse-primary:#8e4f00;
+--surface-dim:#17120f;
+--surface-bright:#3e3833;
+--surface-container-lowest:#120d0a;
+--surface-container-low:#201b17;
+--surface-container:#241f1a;
+--surface-container-high:#2f2925;
+--surface-container-highest:#3a342f;
+}
+
+ 
+    </style> 
+  
+  
+  
+  </head>
+
+
+
+
+
+<body class="dark">
+  <nav class="s bottom no-space" id="rodape"><a onclick="goTo('#estabelecimentos', 'Locais')"><i>explore_nearby</i><span>Locais</span></a><a onclick="goTo('#pessoas-perto', 'Pessoas')"><i>group</i><span>Pessoas</span></a><a onclick="goTo('#pedido', 'Pedido')"><i>shopping_cart</i><span>Pedido</span>
+      <div class="badge circle">1</div></a><a onclick="goTo('#registro', 'Perfil')"><i>account_circle</i><span>Perfil</span></a>
+    <button class="square round extra fill" data-ui="#procurar"><img class="small" src="https://i.ibb.co/pys9FyH/beevy-logo.png"/></button>
+  </nav>
+  <nav class="left m l">
+    <header>
+      <nav>
+        <button class="square round extra fill" data-ui="#procurar"><img class="small" src="https://i.ibb.co/pys9FyH/beevy-logo.png"/></button>
+      </nav>
+    </header><a onclick="goTo('#estabelecimentos', 'Locais')"><i>explore_nearby</i><span>Locais</span></a><a onclick="goTo('#pessoas-perto', 'Pessoas')"><i>group</i><span>Pessoas</span></a><a onclick="goTo('#pedido', 'Pedido')"><i>shopping_cart</i><span>Pedido</span>
+      <div class="badge circle">1</div></a><a onclick="goTo('#registro', 'Perfil')"><i>account_circle</i><span>Perfil</span></a>
+  </nav>
+  <header class="responsive fixed">
+    <nav>
+      <div class="max truncate">
+        <h5 class="page top active" id="titulo"></h5>
+      </div>
+      <button class="circle transparent" onclick="updateTheme()"><i>brightness_medium</i></button>
+      <button class="circle transparent"><i>menu</i>
+        <menu class="left no-wrap" id="menu" data-ui="#menu"><a onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')">Chat</a><a onclick="goTo('#registro', 'Criar conta')">Criar conta</a><a onclick="goTo('#esqueci-senha', 'Esqueci minha senha')">Esqueci minha senha</a><a onclick="goTo('#galeria', 'Galeria')">Galeria</a><a onclick="goTo('#estabelecimentos', 'Locais')">Locais</a><a onclick="goTo('#estabelecimento', 'Lorem ipsum')">Local</a><a onclick="goTo('#login')">Login</a><a onclick="goTo('#pedido', 'Pedido')">Pedido</a><a onclick="goTo('#pessoas-perto', 'Pessoas')">Pessoas</a></menu>
+      </button>
+    </nav>
+  </header>
+  <main class="responsive no-scroll">
+    <div class="page right active" id="login">
+      <article class="round large-padding no-elevate">
+        <div class="center-align"><img src="https://lh3.googleusercontent.com/proxy/wAAH4kvfJoGJU6iqjrBj-S1CVxv1DDynH9q_1q9F_WKUHDGH-3_MXTgbNieS6k6wA1bOMKvobRk"/></div>
+        <div class="field label border large">
+          <input/>
+          <label>E-mail</label>
+        </div>
+        <div class="field label border large suffix">
+          <input type="password"/>
+          <label>Senha</label><i>visibility</i><span class="helper"><a class="link" onclick="goTo('#esqueci-senha', 'Esqueci minha senha')">Esqueci minha senha</a></span>
+        </div>
+        <div class="space"></div>
+        <div class="center-align"><a class="link" onclick="goTo('#registro', 'Criar conta')">Criar conta</a></div>
+        <div class="space"></div>
+        <nav class="vertical">
+          <button class="responsive extra" onclick="goTo('#estabelecimentos', 'Locais')"><span>Entrar</span></button>
+          <button class="responsive extra fill" onclick="goTo('#estabelecimentos', 'Locais')"><img src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-259-675868.png?f=webp&amp;w=256"/><span>Entrar com Facebook</span></button>
+          <button class="responsive extra fill" onclick="goTo('#estabelecimentos', 'Locais')"><img src="https://img.icons8.com/win10/200/google-logo.png"/><span>Entrar com Google</span></button>
+        </nav>
+      </article>
+    </div>
+    <div class="page right" id="registro">
+      <article class="round large-padding no-elevate">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a class="link" onclick="goTo('#galeria', 'Galeria')">Adicionar ou remover fotos</a></p>
+        <div class="grid">
+          <div class="s12 m6 l6">
+            <div class="field label border large">
+              <input/>
+              <label>Nome</label>
+            </div>
+          </div>
+          <div class="s12 m6 l6">
+            <div class="field label border large">
+              <input/>
+              <label>Sobrenome</label>
+            </div>
+          </div>
+          <div class="s12 m6 l6">
+            <div class="field label border large">
+              <input/>
+              <label>E-mail</label>
+            </div>
+          </div>
+          <div class="s12 m6 l6">
+            <div class="field label border large">
+              <input/>
+              <label>Data de nascimento</label>
+            </div>
+          </div>
+          <div class="s12 m6 l6">
+            <div class="field label border large">
+              <input/>
+              <label>Profissão</label>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <button class="extra fill max" onclick="goTo('#login')"><span>Cancelar</span></button>
+          <button class="extra max" onclick="goTo('#estabelecimentos', 'Locais')"><span>Salvar</span></button>
+        </nav>
+      </article>
+    </div>
+    <div class="page right" id="esqueci-senha">
+      <article class="round large-padding no-elevate">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="field label border large">
+          <input/>
+          <label>E-mail</label>
+        </div>
+        <nav>
+          <button class="extra fill max" onclick="goTo('#login')"><span>Cancelar</span></button>
+          <button class="extra max" onclick="goTo('#login')"><span>Enviar</span></button>
+        </nav>
+      </article>
+    </div>
+    <div class="page right" id="galeria">
+      <nav class="center-align">
+        <button class="responsive extra"><i>photo_camera</i><span>Adicionar uma foto</span>
+          <menu><a>Foto da câmera</a><a>Carregar foto do dispositivo</a></menu>
+        </button>
+      </nav>
+      <div class="grid">
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/classic-utility-jacket.jpg"/>
+          <div class="padding">
+            <nav class="center-align">
+              <button class="circle transparent"><i>edit</i>
+                <menu class="no-wrap"><a>Foto da câmera</a><a>Carregar foto do dispositivo</a></menu>
+              </button>
+              <button class="circle transparent"><i>delete</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/kids-jumpsuit.jpg"/>
+          <div class="padding">
+            <nav class="center-align">
+              <button class="circle transparent"><i>edit</i>
+                <menu class="no-wrap"><a>Foto da câmera</a><a>Carregar foto do dispositivo</a></menu>
+              </button>
+              <button class="circle transparent"><i>delete</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/dogtooth-style-jacket.jpg"/>
+          <div class="padding">
+            <nav class="center-align">
+              <button class="circle transparent"><i>edit</i>
+                <menu class="no-wrap"><a>Foto da câmera</a><a>Carregar foto do dispositivo</a></menu>
+              </button>
+              <button class="circle transparent"><i>delete</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/retro-shoe.jpg"/>
+          <div class="padding">
+            <nav class="center-align">
+              <button class="circle transparent"><i>edit</i>
+                <menu class="no-wrap"><a>Foto da câmera</a><a>Carregar foto do dispositivo</a></menu>
+              </button>
+              <button class="circle transparent"><i>delete</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/beach-house-in-collingwood-001.jpg"/>
+          <div class="padding">
+            <nav class="center-align">
+              <button class="circle transparent"><i>edit</i>
+                <menu class="no-wrap"><a>Foto da câmera</a><a>Carregar foto do dispositivo</a></menu>
+              </button>
+              <button class="circle transparent"><i>delete</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/beach-house-in-collingwood-002.jpg"/>
+          <div class="padding">
+            <nav class="center-align">
+              <button class="circle transparent"><i>edit</i>
+                <menu class="no-wrap"><a>Foto da câmera</a><a>Carregar foto do dispositivo</a></menu>
+              </button>
+              <button class="circle transparent"><i>delete</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/beach-house-in-collingwood-003.jpg"/>
+          <div class="padding">
+            <nav class="center-align">
+              <button class="circle transparent"><i>edit</i>
+                <menu class="no-wrap"><a>Foto da câmera</a><a>Carregar foto do dispositivo</a></menu>
+              </button>
+              <button class="circle transparent"><i>delete</i></button>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="page right" id="estabelecimentos">
+      <nav class="scroll">
+        <button class="chip fill">Todos</button>
+        <button class="chip">Balada</button>
+        <button class="chip">Bar</button>
+        <button class="chip">Evento</button>
+        <button class="chip">Lanchonete</button>
+        <button class="chip">Pizzaria</button>
+        <button class="chip">Restaurante</button>
+      </nav>
+      <div class="space"></div><a class="row wave" onclick="goTo('#estabelecimento', 'Lorem ipsum')"><img class="small round" src="https://www.beercss.com/classic-utility-jacket.jpg"/>
+        <div class="max truncate"><b>Lorem ipsum</b>
+          <div>Bar | Balada</div>
+        </div>
+        <label>1 km</label></a>
+      <hr/><a class="row wave" onclick="goTo('#estabelecimento', 'Lorem ipsum')"><img class="small round" src="https://www.beercss.com/kids-jumpsuit.jpg"/>
+        <div class="max truncate"><b>Lorem ipsum</b>
+          <div>Pizzaria</div>
+        </div>
+        <label>2 km</label></a>
+      <hr/><a class="row wave" onclick="goTo('#estabelecimento', 'Lorem ipsum')"><img class="small round" src="https://www.beercss.com/dogtooth-style-jacket.jpg"/>
+        <div class="max truncate"><b>Lorem ipsum</b>
+          <div>Restaurante</div>
+        </div>
+        <label>3 km</label></a>
+    </div>
+    <div class="page right" id="estabelecimento">
+      <div class="tabs left-align scroll"><a class="active" data-ui="#sobre">Sobre</a><a data-ui="#pedidos">Fazer um pedido</a><a data-ui="#como-chegar">Como chegar?</a></div>
+      <div class="space"></div>
+      <div>
+        <div class="page right active" id="sobre">
+          <article class="round large-padding no-elevate">
+            <h6>Sobre</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <nav class="scroll"><img class="large round" src="https://www.beercss.com/classic-utility-jacket.jpg"/><img class="large round" src="https://www.beercss.com/kids-jumpsuit.jpg"/><img class="large round" src="https://www.beercss.com/dogtooth-style-jacket.jpg"/><img class="large round" src="https://www.beercss.com/retro-shoe.jpg"/><img class="large round" src="https://www.beercss.com/beach-house-in-collingwood-001.jpg"/><img class="large round" src="https://www.beercss.com/beach-house-in-collingwood-002.jpg"/><img class="large round" src="https://www.beercss.com/beach-house-in-collingwood-003.jpg"/></nav>
+          </article>
+          <article class="round large-padding no-elevate">
+            <h6>Atendimento</h6>
+            <p>Atendemos das 08h as 18h, de segunda a sexta.</p>
+          </article>
+          <article class="round large-padding no-elevate">
+            <h6>Pessoas neste local</h6>
+            <nav class="scroll"><img class="large round" src="https://www.beercss.com/classic-utility-jacket.jpg"/><img class="large round" src="https://www.beercss.com/kids-jumpsuit.jpg"/><img class="large round" src="https://www.beercss.com/dogtooth-style-jacket.jpg"/><img class="large round" src="https://www.beercss.com/retro-shoe.jpg"/><img class="large round" src="https://www.beercss.com/beach-house-in-collingwood-001.jpg"/><img class="large round" src="https://www.beercss.com/beach-house-in-collingwood-002.jpg"/><img class="large round" src="https://www.beercss.com/beach-house-in-collingwood-003.jpg"/></nav>
+          </article>
+        </div>
+        <div class="page right" id="pedidos">
+          <nav class="scroll">
+            <button class="chip fill">Bebidas</button>
+            <button class="chip">Hamburguers</button>
+            <button class="chip">Pasteis</button>
+            <button class="chip">Pizzas</button>
+          </nav>
+          <div class="space"></div>
+          <div class="row small-padding"><img class="small round" src="https://www.beercss.com/classic-utility-jacket.jpg"/>
+            <div class="max truncate"><b>Lorem ipsum</b>
+              <div>Hamburger</div>
+            </div>
+            <button class="circle fill small" data-ui="#pedido-alterado"><i>remove</i></button>
+            <div>2</div>
+            <button class="circle fill small" data-ui="#pedido-alterado"><i>add</i></button>
+          </div>
+          <hr/>
+          <div class="row small-padding"><img class="small round" src="https://www.beercss.com/kids-jumpsuit.jpg"/>
+            <div class="max truncate"><b>Lorem ipsum</b>
+              <div>Bebida</div>
+            </div>
+            <div>0</div>
+            <button class="circle fill small" data-ui="#pedido-alterado"><i>add</i></button>
+          </div>
+          <hr/>
+          <div class="row small-padding"><img class="small round" src="https://www.beercss.com/dogtooth-style-jacket.jpg"/>
+            <div class="max truncate"><b>Lorem ipsum</b>
+              <div>Pizza</div>
+            </div>
+            <div>0</div>
+            <button class="circle fill small" data-ui="#pedido-alterado"><i>add</i></button>
+          </div>
+        </div>
+        <div class="page right" id="pessoas">
+          <div class="grid">
+            <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/classic-utility-jacket.jpg"/>
+              <div class="padding">Lorem ipsum dolor</div>
+            </article>
+            <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/kids-jumpsuit.jpg"/>
+              <div class="padding">Lorem ipsum dolor</div>
+            </article>
+            <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/dogtooth-style-jacket.jpg"/>
+              <div class="padding">Lorem ipsum dolor</div>
+            </article>
+            <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/retro-shoe.jpg"/>
+              <div class="padding">Lorem ipsum dolor</div>
+            </article>
+            <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/beach-house-in-collingwood-001.jpg"/>
+              <div class="padding">Lorem ipsum dolor</div>
+            </article>
+            <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/beach-house-in-collingwood-002.jpg"/>
+              <div class="padding">Lorem ipsum dolor</div>
+            </article>
+            <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/beach-house-in-collingwood-003.jpg"/>
+              <div class="padding">Lorem ipsum dolor</div>
+            </article>
+          </div>
+        </div>
+        <div class="page right" id="como-chegar"><img class="responsive round medium-height" src="https://cdn.prod.website-files.com/6050a76fa6a633d5d54ae714/609147088669907f652110b0_report-an-issue(about-maps).jpeg"/></div>
+      </div>
+    </div>
+    <div class="page right" id="pedido">
+      <article class="round large-padding no-elevate">
+        <div class="row small-padding"><img class="small round" src="https://www.beercss.com/classic-utility-jacket.jpg"/>
+          <div class="max truncate"><b>Lorem ipsum</b>
+            <div>Hamburger</div>
+          </div>
+          <button class="circle fill small"><i>remove</i></button>
+          <div>2</div>
+          <button class="circle fill small"><i>add</i></button>
+        </div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="space"></div>
+        <div class="field border textarea">
+          <textarea placeholder="Sem tomate, sem cebola, etc"></textarea>
+        </div>
+        <nav class="right-align no-space">
+          <div class="max field large border left-round small-round">
+            <input placeholder="N.º da mesa"/>
+          </div>
+          <button class="extra right-round">Finalizar pedido</button>
+        </nav>
+      </article>
+    </div>
+    <div class="page right" id="pessoas-perto">
+      <nav class="scroll">
+        <button class="chip fill">Todas</button>
+        <button class="chip">Homem</button>
+        <button class="chip">Mulher</button>
+        <button class="chip">LGBT+</button>
+      </nav>
+      <div class="grid">
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/classic-utility-jacket.jpg"/>
+          <div class="padding">
+            <nav>
+              <div class="max truncate">
+                <div>Lorem ipsum</div>
+                <label>1 km</label>
+              </div>
+              <button class="circle transparent" onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')"><i>chat</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/kids-jumpsuit.jpg"/>
+          <div class="padding">
+            <nav>
+              <div class="max truncate">
+                <div>Lorem ipsum</div>
+                <label>1 km</label>
+              </div>
+              <button class="circle transparent" onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')"><i>chat</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/dogtooth-style-jacket.jpg"/>
+          <div class="padding">
+            <nav>
+              <div class="max truncate">
+                <div>Lorem ipsum</div>
+                <label>1 km</label>
+              </div>
+              <button class="circle transparent" onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')"><i>chat</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/retro-shoe.jpg"/>
+          <div class="padding">
+            <nav>
+              <div class="max truncate">
+                <div>Lorem ipsum</div>
+                <label>1 km</label>
+              </div>
+              <button class="circle transparent" onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')"><i>chat</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/beach-house-in-collingwood-001.jpg"/>
+          <div class="padding">
+            <nav>
+              <div class="max truncate">
+                <div>Lorem ipsum</div>
+                <label>1 km</label>
+              </div>
+              <button class="circle transparent" onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')"><i>chat</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/beach-house-in-collingwood-002.jpg"/>
+          <div class="padding">
+            <nav>
+              <div class="max truncate">
+                <div>Lorem ipsum</div>
+                <label>2 km</label>
+              </div>
+              <button class="circle transparent" onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')"><i>chat</i></button>
+            </nav>
+          </div>
+        </article>
+        <article class="s6 m4 l3 round no-padding no-elevate"><img class="responsive medium" src="https://www.beercss.com/beach-house-in-collingwood-003.jpg"/>
+          <div class="padding">
+            <nav>
+              <div class="max truncate">
+                <div>Lorem ipsum</div>
+                <label>3 km</label>
+              </div>
+              <button class="circle transparent" onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')"><i>chat</i></button>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="page right" id="chat">
+      <article class="no-elevate large-margin right-margin right-round">
+        <div class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="right-align">
+          <label>10:25h</label>
+        </div>
+      </article>
+      <article class="no-elevate fill large-margin left-margin left-round">
+        <div class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="right-align">
+          <label>10:27h</label>
+        </div>
+      </article>
+      <div class="field border round large suffix max">
+        <input placeholder="Enviar uma mensagem"/><i class="front">send</i>
+      </div>
+    </div>
+    <div class="snackbar" id="pedido-alterado">Seu pedido foi atualizado</div>
+    <dialog class="transparent top" id="procurar">
+      <nav>
+        <div class="max m l"></div>
+        <div class="max">
+          <div class="field large prefix suffix round fill no-margin"><i>search</i>
+            <input placeholder="Procurar locais"/><i>mic</i>
+          </div>
+        </div>
+        <div class="max m l"></div>
+      </nav>
+    </dialog>
+  </main>
+</body>
+
+
+<script src="test.js"></script>
+
+
+
+
+</html>
