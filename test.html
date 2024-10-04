@@ -11,88 +11,10 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
   
   
-   <style>
+ <style>
 
 
 
- :root,
-body.light {
---primary:#8e4f00;
---on-primary:#ffffff;
---primary-container:#ffdcc1;
---on-primary-container:#2e1500;
---secondary:#735943;
---on-secondary:#ffffff;
---secondary-container:#ffdcc1;
---on-secondary-container:#2a1706;
---tertiary:#5a6238;
---on-tertiary:#ffffff;
---tertiary-container:#dfe8b2;
---on-tertiary-container:#181e00;
---error:#ba1a1a;
---on-error:#ffffff;
---error-container:#ffdad6;
---on-error-container:#410002;
---background:#fffbff;
---on-background:#201b17;
---surface:#fff8f5;
---on-surface:#201b17;
---surface-variant:#f2dfd1;
---on-surface-variant:#51443a;
---outline:#837469;
---outline-variant:#d6c3b6;
---shadow:#000000;
---scrim:#000000;
---inverse-surface:#352f2b;
---inverse-on-surface:#faefe8;
---inverse-primary:#ffb878;
---surface-dim:#e3d8d1;
---surface-bright:#fff8f5;
---surface-container-lowest:#ffffff;
---surface-container-low:#fdf1ea;
---surface-container:#f7ece5;
---surface-container-high:#f1e6df;
---surface-container-highest:#ece0da;
-}
-
-body.dark {
-  --primary:#ffb878;
---on-primary:#4c2700;
---primary-container:#6c3a00;
---on-primary-container:#ffdcc1;
---secondary:#e2c0a5;
---on-secondary:#412c19;
---secondary-container:#5a422d;
---on-secondary-container:#ffdcc1;
---tertiary:#c3cb98;
---on-tertiary:#2d330e;
---tertiary-container:#434a23;
---on-tertiary-container:#dfe8b2;
---error:#ffb4ab;
---on-error:#690005;
---error-container:#93000a;
---on-error-container:#ffb4ab;
---background:#201b17;
---on-background:#ece0da;
---surface:#17120f;
---on-surface:#ece0da;
---surface-variant:#51443a;
---on-surface-variant:#d6c3b6;
---outline:#9e8e82;
---outline-variant:#51443a;
---shadow:#000000;
---scrim:#000000;
---inverse-surface:#ece0da;
---inverse-on-surface:#352f2b;
---inverse-primary:#8e4f00;
---surface-dim:#17120f;
---surface-bright:#3e3833;
---surface-container-lowest:#120d0a;
---surface-container-low:#201b17;
---surface-container:#241f1a;
---surface-container-high:#2f2925;
---surface-container-highest:#3a342f;
-}
 
  
     </style> 
@@ -106,17 +28,23 @@ body.dark {
 
 
 <body class="dark">
-  <nav class="s bottom no-space" id="rodape"><a onclick="goTo('#estabelecimentos', 'Locais')"><i>explore_nearby</i><span>Locais</span></a><a onclick="goTo('#pessoas-perto', 'Pessoas')"><i>group</i><span>Pessoas</span></a><a onclick="goTo('#pedido', 'Pedido')"><i>shopping_cart</i><span>Pedido</span>
-      <div class="badge circle">1</div></a><a onclick="goTo('#registro', 'Perfil')"><i>account_circle</i><span>Perfil</span></a>
-    <button class="square round extra fill" data-ui="#procurar"><img class="small" src="https://i.ibb.co/pys9FyH/beevy-logo.png"/></button>
+  <nav class="s bottom no-space" id="rodape">
+		<a onclick="goTo('#estabelecimentos', 'Locais')"><i>explore_nearby</i><span>Locais</span></a>
+		<a onclick="goTo('#pessoas-perto', 'Pessoas')"><i>group</i><span>Pessoas</span></a>
+		<a onclick="goTo('#pedido', 'Pedido')"><i>shopping_cart</i><span>Pedido</span><div class="badge circle">1</div></a>
+		<a onclick="goTo('#registro', 'Perfil')"><i>account_circle</i><span>Perfil</span></a>
+    <button class="square round extra fill" data-ui="#procurar"><img class="small" src="favicon.svg"/></button>
   </nav>
   <nav class="left m l">
     <header>
       <nav>
-        <button class="square round extra fill" data-ui="#procurar"><img class="small" src="https://i.ibb.co/pys9FyH/beevy-logo.png"/></button>
+        <button class="square round extra fill" data-ui="#procurar"><img class="small" src="favicon.svg"/></button>
       </nav>
-    </header><a onclick="goTo('#estabelecimentos', 'Locais')"><i>explore_nearby</i><span>Locais</span></a><a onclick="goTo('#pessoas-perto', 'Pessoas')"><i>group</i><span>Pessoas</span></a><a onclick="goTo('#pedido', 'Pedido')"><i>shopping_cart</i><span>Pedido</span>
-      <div class="badge circle">1</div></a><a onclick="goTo('#registro', 'Perfil')"><i>account_circle</i><span>Perfil</span></a>
+    </header>
+	  <a onclick="goTo('#estabelecimentos', 'Locais')"><i>explore_nearby</i><span>Locais</span></a>
+	  <a onclick="goTo('#pessoas-perto', 'Pessoas')"><i>group</i><span>Pessoas</span></a>
+	  <a onclick="goTo('#pedido', 'Pedido')"><i>shopping_cart</i><span>Pedido</span><div class="badge circle">1</div></a>
+	  <a onclick="goTo('#registro', 'Perfil')"><i>account_circle</i><span>Perfil</span></a>
   </nav>
   <header class="responsive fixed">
     <nav>
@@ -125,22 +53,61 @@ body.dark {
       </div>
       <button class="circle transparent" onclick="updateTheme()"><i>brightness_medium</i></button>
       <button class="circle transparent"><i>menu</i>
-        <menu class="left no-wrap" id="menu" data-ui="#menu"><a onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')">Chat</a><a onclick="goTo('#registro', 'Criar conta')">Criar conta</a><a onclick="goTo('#esqueci-senha', 'Esqueci minha senha')">Esqueci minha senha</a><a onclick="goTo('#galeria', 'Galeria')">Galeria</a><a onclick="goTo('#estabelecimentos', 'Locais')">Locais</a><a onclick="goTo('#estabelecimento', 'Lorem ipsum')">Local</a><a onclick="goTo('#login')">Login</a><a onclick="goTo('#pedido', 'Pedido')">Pedido</a><a onclick="goTo('#pessoas-perto', 'Pessoas')">Pessoas</a></menu>
+        <menu class="left no-wrap" id="menu" data-ui="#menu">
+		<a onclick="goTo('#chat', '&lt;nav&gt;&lt;img class=&quot;small round&quot; src=&quot;https://www.beercss.com/classic-utility-jacket.jpg&quot; /&gt;&lt;div&gt;Fulano&lt;/div&gt;&lt;/nav&gt;')">Chat</a>
+		<a onclick="goTo('#registro', 'Criar conta')">Criar conta</a>
+		<a onclick="goTo('#esqueci-senha', 'Esqueci minha senha')">Esqueci minha senha</a>
+		<a onclick="goTo('#galeria', 'Galeria')">Galeria</a>
+		<a onclick="goTo('#estabelecimentos', 'Locais')">Locais</a>
+		<a onclick="goTo('#estabelecimento', 'Lorem ipsum')">Local</a>
+		<a onclick="goTo('#login')">Login</a>
+		<a onclick="goTo('#pedido', 'Pedido')">Pedido</a>
+		<a onclick="goTo('#pessoas-perto', 'Pessoas')">Pessoas</a>
+		</menu>
       </button>
     </nav>
   </header>
   <main class="responsive no-scroll">
-    <div class="page right active" id="login">
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="page right active" id="login">
       <article class="round large-padding no-elevate">
-        <div class="center-align"><img src="https://lh3.googleusercontent.com/proxy/wAAH4kvfJoGJU6iqjrBj-S1CVxv1DDynH9q_1q9F_WKUHDGH-3_MXTgbNieS6k6wA1bOMKvobRk"/></div>
-        <div class="field label border large">
-          <input/>
-          <label>E-mail</label>
-        </div>
-        <div class="field label border large suffix">
-          <input type="password"/>
-          <label>Senha</label><i>visibility</i><span class="helper"><a class="link" onclick="goTo('#esqueci-senha', 'Esqueci minha senha')">Esqueci minha senha</a></span>
-        </div>
+        <div class="center-align"><img class="circle extra" src="https://profinvestment.com/wp-content/uploads/2024/10/listing-cats.png"></div>
+
+        <div class="space"></div>
+
+
+ <h3>Листинг и аирдроп CATS</h3>
+    <blockquote>
+     Листинг на Bybit состоится 8 октября в 13:00 UTC+3. В первых числах октября 2024 будет объявлена точная дата листинга. Биржи, на которые уже сейчас можно оформить вывод: Bitget (+бонусные CATS), Bybit, Gate.io, KuCoin. Для вывода нужно соответствовать условиям, подробнее о них в статье.
+    </blockquote>
+
+      <h4>Инструкция по получению дропа:  <h4>
+<p class="medium-text">
+Убедитесь, что соответствуете хотя бы одному критерию, позволяющему рассчитывать на дроп – 1) купили OG Pass; 2) провели хотя бы одну транзакцию (чем больше, тем лучше); 3) пригласили 5 рефералов, выполнили 15 тасков и 5 раз обновили аватар. В качестве дополнительного множителя учитывается количество поинтов на балансе.<br /><br />
+Откройте раздел Airdrop в приложении.<br /><br />
+Выберите способ получения – Exchanges. Вывод на некастодиальные кошельки будет доступен после листинга.<br /><br />
+Выберите предпочтительную биржу – Bitget, Bybit, Gate.io или KuCoin.<br /><br />
+Если у вас уже есть биржевой аккаунт, нажмите Meow, I have it! В противном случае потребуется сначала создать и верифицировать аккаунт.<br /><br />
+Введите данные для вывода: UID, адрес в сети TON, мемо.<br /><br />
+Ожидайте листинга и зачисления.<br />
+
+
+    </p>
+
+
+
+
+
+
+
+
         <div class="space"></div>
         <div class="center-align"><a class="link" onclick="goTo('#registro', 'Criar conta')">Criar conta</a></div>
         <div class="space"></div>
@@ -151,6 +118,12 @@ body.dark {
         </nav>
       </article>
     </div>
+	
+	
+	
+	
+	
+	
     <div class="page right" id="registro">
       <article class="round large-padding no-elevate">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a class="link" onclick="goTo('#galeria', 'Galeria')">Adicionar ou remover fotos</a></p>
@@ -192,6 +165,17 @@ body.dark {
         </nav>
       </article>
     </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <div class="page right" id="esqueci-senha">
       <article class="round large-padding no-elevate">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -205,6 +189,15 @@ body.dark {
         </nav>
       </article>
     </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <div class="page right" id="galeria">
       <nav class="center-align">
         <button class="responsive extra"><i>photo_camera</i><span>Adicionar uma foto</span>
@@ -284,6 +277,16 @@ body.dark {
         </article>
       </div>
     </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <div class="page right" id="estabelecimentos">
       <nav class="scroll">
         <button class="chip fill">Todos</button>
@@ -310,6 +313,17 @@ body.dark {
         </div>
         <label>3 km</label></a>
     </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <div class="page right" id="estabelecimento">
       <div class="tabs left-align scroll"><a class="active" data-ui="#sobre">Sobre</a><a data-ui="#pedidos">Fazer um pedido</a><a data-ui="#como-chegar">Como chegar?</a></div>
       <div class="space"></div>
@@ -390,6 +404,14 @@ body.dark {
         <div class="page right" id="como-chegar"><img class="responsive round medium-height" src="https://cdn.prod.website-files.com/6050a76fa6a633d5d54ae714/609147088669907f652110b0_report-an-issue(about-maps).jpeg"/></div>
       </div>
     </div>
+	
+	
+	
+	
+	
+	
+	
+	
     <div class="page right" id="pedido">
       <article class="round large-padding no-elevate">
         <div class="row small-padding"><img class="small round" src="https://www.beercss.com/classic-utility-jacket.jpg"/>
@@ -413,6 +435,16 @@ body.dark {
         </nav>
       </article>
     </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <div class="page right" id="pessoas-perto">
       <nav class="scroll">
         <button class="chip fill">Todas</button>
@@ -500,6 +532,18 @@ body.dark {
         </article>
       </div>
     </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <div class="page right" id="chat">
       <article class="no-elevate large-margin right-margin right-round">
         <div class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -517,6 +561,13 @@ body.dark {
         <input placeholder="Enviar uma mensagem"/><i class="front">send</i>
       </div>
     </div>
+	
+	
+	
+	
+	
+	
+
     <div class="snackbar" id="pedido-alterado">Seu pedido foi atualizado</div>
     <dialog class="transparent top" id="procurar">
       <nav>
