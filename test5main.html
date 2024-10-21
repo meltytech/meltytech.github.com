@@ -199,11 +199,14 @@
 			
   </main>
   
-  <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
- <script>
+
+  
+<script>
     $(document).ready(function(){
-        var jsCode = `
-            <script>
+        $("#TRXBTC").html(`
+<!-- TradingView Widget BEGIN -->
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
 new TradingView.widget({
   "width": 980,
   "height": 610,
@@ -219,10 +222,10 @@ new TradingView.widget({
   "allow_symbol_change": true,
   "hideideasbutton": true
 });
+</script>
+<!-- TradingView Widget END -->
 
-            <\/script>
-        `;
-        $("#TRXBTC").html(jsCode);
+
+        `);
     });
-</script> 
-  
+</script>
