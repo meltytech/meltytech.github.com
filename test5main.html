@@ -81,7 +81,7 @@
 
   <div class="grid">
     <div class="s12 l4">
-      <div class="fill medium-height middle-align center-align">
+      <div class="medium-height middle-align center-align">
      
 		<script type="text/javascript">
 baseUrl = "https://widgets.cryptocompare.com/";
@@ -103,35 +103,56 @@ embedder.parentNode.appendChild(s);
       </div>
     </div>
     <div class="s12 l4">
-      <div class="fill medium-height middle-align center-align">
-        <div class="center-align">
-          <i class="extra">mail</i>
-          <h5>You've successfully signed up</h5>
-          <p>Click the button to invite your friends</p>
-          <div class="space"></div>
-          <nav class="center-align">
-            <button class="border round">Skip</button>
-            <button>Invite your friends</button>
-          </nav>
-        </div>
+      <div class="medium-height middle-align center-align">
+     
+		<script type="text/javascript">
+baseUrl = "https://widgets.cryptocompare.com/";
+var scripts = document.getElementsByTagName("script");
+var embedder = scripts[ scripts.length - 1 ];
+var cccTheme = {"General":{"background":"#1c1b1e","borderColor":"#545454","borderRadius":"4px 4px 0 0"},"Header":{"background":"#000","color":"#FFF"},"Followers":{"background":"#f7931a","color":"#FFF","borderColor":"#e0bd93","counterBorderColor":"#fdab48","counterColor":"#f5d7b2"},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"fillColor":"rgba(86,202,158,0.5)","borderColor":"#56ca9e"},"Conversion":{"background":"#000","color":"#999"}};
+(function (){
+var appName = encodeURIComponent(window.location.hostname);
+if(appName==""){appName="local";}
+var s = document.createElement("script");
+s.type = "text/javascript";
+s.async = true;
+var theUrl = baseUrl+'serve/v1/coin/chart?fsym=NOT&tsym=USD';
+s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+embedder.parentNode.appendChild(s);
+})();
+</script>
+       
       </div>
     </div>
+	
+	
+	
+	
+	
     <div class="s12 l4">
-      <div class="fill medium-height middle-align center-align">
-        <div class="center-align">
-          <i class="extra">person</i>
-          <h5>You are not following anyone</h5>
-          <p>Start to meet new friends</p>
-          <div class="space"></div>
-          <nav class="no-space">
-            <div class="max field border left-round">
-              <input>
-            </div>
-            <button class="large right-round">Search</button>
-          </nav>
-        </div>
+      <div class="medium-height middle-align center-align">
+     
+		<script type="text/javascript">
+baseUrl = "https://widgets.cryptocompare.com/";
+var scripts = document.getElementsByTagName("script");
+var embedder = scripts[ scripts.length - 1 ];
+var cccTheme = {"General":{"background":"#1c1b1e","borderColor":"#545454","borderRadius":"4px 4px 0 0"},"Header":{"background":"#000","color":"#FFF"},"Followers":{"background":"#f7931a","color":"#FFF","borderColor":"#e0bd93","counterBorderColor":"#fdab48","counterColor":"#f5d7b2"},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"fillColor":"rgba(86,202,158,0.5)","borderColor":"#56ca9e"},"Conversion":{"background":"#000","color":"#999"}};
+(function (){
+var appName = encodeURIComponent(window.location.hostname);
+if(appName==""){appName="local";}
+var s = document.createElement("script");
+s.type = "text/javascript";
+s.async = true;
+var theUrl = baseUrl+'serve/v1/coin/chart?fsym=NOT&tsym=USD';
+s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+embedder.parentNode.appendChild(s);
+})();
+</script>
+       
       </div>
     </div>
+	
+	
   </div>
   <div class="large-space"></div>  
 
