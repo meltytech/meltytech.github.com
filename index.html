@@ -10,79 +10,42 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.8/dist/cdn/beer.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
   
-   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
   
  <style> 
-body, #button {
-  font-family: 'Press Start 2P';
-}
-.clicker {
-  height: 100%; 
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-  color:#fff;
+
+
+
+
+
+#score {
+  color: yellow;
+  font-size: 48px;
 }
 
-#display {
-  margin-bottom: 120px;
+.click {
+  color: gray;
+  font-size: 18px;
 }
 
-#button {
-  position: absolute;
-  border: none;
-  background-color: #CC3C20;
-  color:#fff;
-  line-height: 50px;
-  padding: 15px 20px;
-  cursor: pointer;
-  outline: none;
+
+
+#main-button {
+  margin: 40px auto;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: solid 12px primary;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://meltytech.github.io/favicon.svg);
 }
 
-#button:active {
-  transform: translateY(3px);
-} 
+
+
+
 </style>  
-<script>  
-let clicks = 1;
 
-const TIMEOUT = 5000;
-
-const display = document.querySelector("#display");
-const button = document.querySelector("#button");
-const counter = document.querySelector("#counter");
-
-button.onclick = start;
-
-function start() {
-  const startTime = Date.now();
-
-  counter.textContent = clicks;
-  display.textContent = formatTime(TIMEOUT);
-  button.onclick = () => (counter.textContent = ++clicks);
-
-  const interval = setInterval(() => {
-    const delta = Date.now() - startTime;
-    display.textContent = formatTime(TIMEOUT - delta);
-  }, 100);
-
-  const timeout = setTimeout(() => {
-    button.onclick = null;
-    display.textContent = "Game Over";
-
-    clearInterval(interval);
-    clearTimeout(timeout);
-  }, TIMEOUT);
-}
-
-function formatTime(ms) {
-  return Number.parseFloat(ms / 1000).toFixed(2);
-}
-
-</script>    
   
   
   </head>
@@ -166,17 +129,46 @@ function formatTime(ms) {
 
 <main class="responsive">
 
- 
+ <article class="border  center-align middle-align">
+  <h5><span id="score">0</span></h5>
+
+</article>
 
   
   
+
+
+
+
+
+  <div id="main-button" class="wave" onclick="mainClick()"></div>
+
+
+
+
+<script>  
+let score = 0
+let click = 1
+
+let scoreText = document.getElementById("score")
+let clickText = document.getElementById("click")
+
+function mainClick() {
+  score = score + click
+  scoreText.innerText = score
+}
+
+function addClick(add, price) {
+  if (score < price) return
   
+  score = score - price
+  click = click + add
   
-  <div class="clicker">
-    <div id="display"></div>
-    <button id="button">CLICK</button>
-    <div id="counter"></div>
-  </div>
+  scoreText.innerText = score
+  clickText.innerText = click
+}
+</script>    
+
 
 
   
