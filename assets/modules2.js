@@ -60,7 +60,7 @@ const modules = {
 		
       <button class="transparent circle" onclick="updateTheme()"><i id="dark" style="display: none">light_mode</i><i id="light">dark_mode</i></button>
       <button class="transparent circle m l" onclick="refresh()"><i>refresh</i></button>
-	  <button class="transparent circle " href="#" id="toggle-nav1"><i>home</i></button>		
+	
    
       <button class="transparent circle" data-ui="#more3"><i>menu</i></button>
 	  <dialog class="right small" id="more3" data-ui="#more3">
