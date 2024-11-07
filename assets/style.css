@@ -1,0 +1,8 @@
+.logo {
+  display: inline-block;
+  width: 50px; /* Размер иконки */
+  height: 50px; /* Размер иконки */
+  background-image: url('logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#56CBFF;}
+	.st1{font-family:'AntipastoPro-ExtraBold';}
+	.st2{font-size:57.3743px;}
+	.st3{letter-spacing:4;}
+	.st4{fill:url(#SVGID_1_);}
+</style>
+<g>
+	<g>
+		<g>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 15.0093 140.5195)" class="st0 st1 st2 st3">MELTY</text>
+		</g>
+	</g>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="127.208" y1="44.94" x2="82.7197" y2="89.4283">
+			<stop  offset="0" style="stop-color:#0496FF"/>
+			<stop  offset="0.9086" style="stop-color:#56CBFF"/>
+		</linearGradient>
+		<path class="st4" d="M141.02,75.17l-9.06,10.79c-2.79,3.32-7.74,3.75-11.06,0.97l0,0c-3.32-2.79-3.75-7.74-0.97-11.06L129,65.08
+			c2.79-3.32,7.74-3.75,11.06-0.97l0,0C143.37,66.9,143.8,71.85,141.02,75.17z M105.46,31L105.46,31
+			c-3.32-2.79-8.27-2.35-11.06,0.97L59.24,73.88c-2.79,3.32-2.35,8.27,0.97,11.06l0,0c3.32,2.79,8.27,2.35,11.06-0.97l35.17-41.91
+			C109.22,38.73,108.78,33.78,105.46,31z M122.02,49.18L122.02,49.18c-3.32-2.79-8.27-2.35-11.06,0.97L87.24,76.89
+			c-2.79,3.32-2.35,8.27,0.97,11.06l0,0c3.32,2.79,8.27,2.35,11.06-0.97l23.72-26.74C125.77,56.92,125.34,51.97,122.02,49.18z"/>
+	</g>
+</g>
+</svg>
