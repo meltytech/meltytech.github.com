@@ -1,6 +1,6 @@
 $(document).ready(function() {
     const websites = [
-        { name: "Сайт 1", url: "https://example1.com", interval: 3600, text: "Произвольный текст 1" },
+        { name: "Сайт 1", url: "https://example1.com", interval: 30, text: "Произвольный текст 1" },
         { name: "Сайт 2", url: "https://example2.com", interval: 7200, text: "Произвольный текст 2" },
         { name: "Сайт 3", url: "https://example3.com", interval: 10800, text: "Произвольный текст 3" },
         // Добавьте еще сайты по мере необходимости
