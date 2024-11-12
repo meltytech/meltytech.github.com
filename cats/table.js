@@ -1,8 +1,9 @@
 $(document).ready(function() {
     const websites = [
-        { name: "Сайт 1", url: "https://example1.com", interval: 3600 },
-        { name: "Сайт 2", url: "https://example2.com", interval: 7200 },
-        { name: "Сайт 3", url: "https://example3.com", interval: 10800 },
+        { name: "Сайт 1", url: "https://example1.com", interval: 30 },
+        { name: "Сайт 2", url: "https://example2.com", interval: 3600 },
+		{ name: "Сайт 3", url: "https://example2.com", interval: 7200 },
+        { name: "Сайт 4", url: "https://example3.com", interval: 10800 },
         // Добавьте еще сайты по мере необходимости
     ];
 
@@ -31,19 +32,33 @@ $(document).ready(function() {
     }
 
     function startTimer(index, interval) {
-        Cookies.set(`timer-${index}`, interval);
+        const endTime = Date.now() + interval * 1000;
+        Cookies.set(`timer-${index}`, endTime);
         const timerId = setInterval(() => {
-            let timer = parseInt(Cookies.get(`timer-${index}`));
-            timer -= 1;
-            if (timer <= 0) {
+            const remainingTime = parseInt((endTime - Date.now()) / 1000);
+            if (remainingTime <= 0) {
                 clearInterval(timerId);
                 Cookies.remove(`timer-${index}`);
                 updateTable();
             } else {
-                Cookies.set(`timer-${index}`, timer);
-                $(`tr[data-index="${index}"] .action`).text(formatTime(timer));
+                Cookies.set(`timer-${index}`, endTime);
+                $(`tr[data-index="${index}"] .action`).text(formatTime(remainingTime));
             }
         }, 1000);
+    }
+
+    function resumeTimers() {
+        websites.forEach((site, index) => {
+            const timerCookie = Cookies.get(`timer-${index}`);
+            if (timerCookie) {
+                const remainingTime = parseInt((timerCookie - Date.now()) / 1000);
+                if (remainingTime > 0) {
+                    startTimer(index, remainingTime);
+                } else {
+                    Cookies.remove(`timer-${index}`);
+                }
+            }
+        });
     }
 
     $('#website-table').on('click', '.action', function() {
@@ -58,4 +73,5 @@ $(document).ready(function() {
     });
 
     updateTable();
+    resumeTimers();
 });
