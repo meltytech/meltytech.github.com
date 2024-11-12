@@ -51,3 +51,26 @@ $(document).ready(function() {
             const timerCookie = Cookies.get(`timer-${index}`);
             if (timerCookie) {
                 const remainingTime = parseInt((timerCookie - Date.now()) / 1000);
+                if (remainingTime > 0) {
+                    startTimer(index, remainingTime);
+                } else {
+                    Cookies.remove(`timer-${index}`);
+                }
+            }
+        });
+    }
+
+    $('#website-table').on('click', '.action', function() {
+        const row = $(this).closest('tr');
+        const index = row.data('index');
+        const site = websites[index];
+        if ($(this).text() === 'СТАРТ') {
+            window.open(site.url, '_blank');
+            startTimer(index, site.interval);
+            updateTable();
+        }
+    });
+
+    updateTable();
+    resumeTimers();
+});
