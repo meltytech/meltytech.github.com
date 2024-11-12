@@ -1,8 +1,8 @@
 $(document).ready(function() {
     const websites = [
-        { name: "Сайт 1", url: "https://example1.com", interval: 30 },
-        { name: "Сайт 2", url: "https://example2.com", interval: 7200 },
-        { name: "Сайт 3", url: "https://example3.com", interval: 10800 },
+        { name: "Сайт 1", url: "https://example1.com", interval: 3600, text: "Произвольный текст 1" },
+        { name: "Сайт 2", url: "https://example2.com", interval: 7200, text: "Произвольный текст 2" },
+        { name: "Сайт 3", url: "https://example3.com", interval: 10800, text: "Произвольный текст 3" },
         // Добавьте еще сайты по мере необходимости
     ];
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
             const row = $(`
                 <tr data-index="${index}">
                     <td>${site.name}</td>
-                    <td>${timer > 0 ? formatTime(timer) : '-'}</td>
+                    <td>${site.text}</td>
                     <td><button class="action">${timer > 0 ? formatTime(timer) : 'СТАРТ'}</button></td>
                 </tr>
             `);
@@ -51,26 +51,3 @@ $(document).ready(function() {
             const timerCookie = Cookies.get(`timer-${index}`);
             if (timerCookie) {
                 const remainingTime = parseInt((timerCookie - Date.now()) / 1000);
-                if (remainingTime > 0) {
-                    startTimer(index, remainingTime);
-                } else {
-                    Cookies.remove(`timer-${index}`);
-                }
-            }
-        });
-    }
-
-    $('#website-table').on('click', '.action', function() {
-        const row = $(this).closest('tr');
-        const index = row.data('index');
-        const site = websites[index];
-        if ($(this).text() === 'СТАРТ') {
-            window.open(site.url, '_blank');
-            startTimer(index, site.interval);
-            updateTable();
-        }
-    });
-
-    updateTable();
-    resumeTimers();
-});
