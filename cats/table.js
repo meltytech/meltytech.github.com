@@ -1,15 +1,16 @@
 $(document).ready(function() {
     const websites = [
-        { name: "Сайт 1", url: "https://example1.com", interval: 86400 },
-        { name: "Сайт 2", url: "https://example2.com", interval: 10800 },
-        { name: "Сайт 3", url: "https://example3.com", interval: 3600 },
+        { name: "Сайт 1", url: "https://example1.com", interval: 3600 },
+        { name: "Сайт 2", url: "https://example2.com", interval: 7200 },
+        { name: "Сайт 3", url: "https://example3.com", interval: 10800 },
         // Добавьте еще сайты по мере необходимости
     ];
 
     function formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
         const remainingSeconds = seconds % 60;
-        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        return `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
     }
 
     function updateTable() {
