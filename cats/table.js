@@ -1,8 +1,8 @@
 $(document).ready(function() {
     const websites = [
-        { name: "Сайт 1", url: "https://example1.com", interval: 60 },
-        { name: "Сайт 2", url: "https://example2.com", interval: 120 },
-        { name: "Сайт 3", url: "https://example3.com", interval: 180 },
+        { name: "Сайт 1", url: "https://example1.com", interval: 86400 },
+        { name: "Сайт 2", url: "https://example2.com", interval: 10800 },
+        { name: "Сайт 3", url: "https://example3.com", interval: 3600 },
         // Добавьте еще сайты по мере необходимости
     ];
 
