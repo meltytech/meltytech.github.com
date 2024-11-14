@@ -54,44 +54,46 @@
     </article>
 
     <script>
-        $(document).ready(function() {
-            let points = parseInt(Cookies.get('points') || '0');
-            let earnings = 0;
-            let startTime = parseInt(Cookies.get('startTime') || Date.now());
-            let timer = null;
+$(document).ready(function() {
+    let points = parseInt(Cookies.get('points') || '0');
+    let earnings = 0;
+    let startTime = parseInt(Cookies.get('startTime') || Date.now());
+    let timer = null;
 
-            function formatNumber(num) {
-                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-            }
+    function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
 
-            function updatePoints() {
-                const elapsedTime = Math.floor((Date.now() - startTime) / 10000);
-                earnings = Math.min(elapsedTime, 10000); // Ограничение в 10000 поинтов
-                $('#points').text(formatNumber(points));
-                $('#earnings').text(formatNumber(earnings));
+    function updatePoints() {
+        const elapsedTime = (Date.now() - startTime) / 1000; // Пересчитываем время в секунды
+        earnings = Math.min(elapsedTime * 0.01, 1440); // Ограничение в 1440 поинтов, начисление 0.01 поинта в секунду
+        $('#points').text(formatNumber(Math.round(points))); // Округление points до целого числа
+        $('#earnings').text(earnings.toFixed(2)); // Форматирование до сотых
 
-                if (earnings >= 10000) {
-                    clearInterval(timer); // Остановить таймер при достижении 10000 поинтов
-                }
-            }
+        if (earnings >= 1440) {
+            clearInterval(timer); // Остановить таймер при достижении 1440 поинтов
+        }
+    }
 
-            function claimPoints() {
-                points += earnings;
-                earnings = 0;
-                startTime = Date.now();
-                Cookies.set('points', points, { expires: 7 });
-                Cookies.set('startTime', startTime, { expires: 7 });
-                updatePoints();
-                if (!timer) { // Перезапустить таймер, если он был остановлен
-                    timer = setInterval(updatePoints, 10000);
-                }
-            }
+    function claimPoints() {
+        points += earnings;
+        earnings = 0;
+        startTime = Date.now();
+        Cookies.set('points', points, { expires: 7 });
+        Cookies.set('startTime', startTime, { expires: 7 });
+        updatePoints();
+        if (!timer) { // Перезапустить таймер, если он был остановлен
+            timer = setInterval(updatePoints, 1000); // Изменяем интервал на 1000 мс (1 секунда)
+        }
+    }
 
-            $('#claim').on('click', claimPoints);
+    $('#claim').on('click', claimPoints);
 
-            timer = setInterval(updatePoints, 10000);
-            updatePoints();
-        });
+    timer = setInterval(updatePoints, 1000); // Изменяем интервал на 1000 мс (1 секунда)
+    updatePoints();
+});
+
+
     </script>
 
 
