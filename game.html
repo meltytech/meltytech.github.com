@@ -65,13 +65,13 @@
             }
 
             function updatePoints() {
-                const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
-                earnings = Math.min(elapsedTime, 1000); // Ограничение в 1000 поинтов
+                const elapsedTime = Math.floor((Date.now() - startTime) / 10000);
+                earnings = Math.min(elapsedTime, 10000); // Ограничение в 10000 поинтов
                 $('#points').text(formatNumber(points));
                 $('#earnings').text(formatNumber(earnings));
 
-                if (earnings >= 1000) {
-                    clearInterval(timer); // Остановить таймер при достижении 1000 поинтов
+                if (earnings >= 10000) {
+                    clearInterval(timer); // Остановить таймер при достижении 10000 поинтов
                 }
             }
 
@@ -83,13 +83,13 @@
                 Cookies.set('startTime', startTime, { expires: 7 });
                 updatePoints();
                 if (!timer) { // Перезапустить таймер, если он был остановлен
-                    timer = setInterval(updatePoints, 1000);
+                    timer = setInterval(updatePoints, 10000);
                 }
             }
 
             $('#claim').on('click', claimPoints);
 
-            timer = setInterval(updatePoints, 1000);
+            timer = setInterval(updatePoints, 10000);
             updatePoints();
         });
     </script>
