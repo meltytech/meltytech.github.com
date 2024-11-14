@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" content="notranslate">
+    <title>MELTY</title>
+	  <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+<link href="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.css" rel="stylesheet">
+<script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script> 
+ <script src="assets/table.js"></script>
+<script src="assets/dark.js">	</script> 
+<link href="assets/style.css" rel="stylesheet"> 
+
+    <style>
+
+
+    </style>
+	  
+ </head>
+<body class="dark">
+
+<nav id="nav-1" class="drawer left l scroll"> </nav>
+<nav id="nav-2" class="left m scroll"> </nav>
+<nav id="nav-3" class="bottom s"> </nav> 
+<header id="nav-4" class="fixed responsive max surface"> </header> 
+
+<main class="responsive">
+
+
+
+
+
+
+
+<article class="absolute top left right bottom round large-padding large-margin large-elevate">
+        <div class="padding primary absolute middle center">
+            <h5 id="points">0</h5>MELTY
+			
+        </div>
+		
+		
+        <div class="padding absolute center bottom">
+            <nav class="padding">
+                <div class="max"></div>
+                <button id="earnings">0</button>
+                <div class="max"></div>
+                <button id="claim">CLAIM</button>
+            </nav>
+        </div>
+    </article>
+
+    <script>
+        $(document).ready(function() {
+            let points = parseInt(Cookies.get('points') || '0');
+            let earnings = 0;
+            let startTime = parseInt(Cookies.get('startTime') || Date.now());
+            let timer = null;
+
+            function formatNumber(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+            }
+
+            function updatePoints() {
+                const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+                earnings = Math.min(elapsedTime, 1000); // Ограничение в 1000 поинтов
+                $('#points').text(formatNumber(points));
+                $('#earnings').text(formatNumber(earnings));
+
+                if (earnings >= 1000) {
+                    clearInterval(timer); // Остановить таймер при достижении 1000 поинтов
+                }
+            }
+
+            function claimPoints() {
+                points += earnings;
+                earnings = 0;
+                startTime = Date.now();
+                Cookies.set('points', points, { expires: 7 });
+                Cookies.set('startTime', startTime, { expires: 7 });
+                updatePoints();
+                if (!timer) { // Перезапустить таймер, если он был остановлен
+                    timer = setInterval(updatePoints, 1000);
+                }
+            }
+
+            $('#claim').on('click', claimPoints);
+
+            timer = setInterval(updatePoints, 1000);
+            updatePoints();
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</main>
+<script src="assets/modules.js"></script>
+</body>
+</html>

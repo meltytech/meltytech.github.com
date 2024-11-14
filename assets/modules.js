@@ -12,10 +12,10 @@ const modules = {
 	  <a href="codes.html"><i>touch_app</i><div>Коди</div></a>
 	  <a href="combo.html"><i>widgets</i><div>Комбо</div></a>
 	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><div>Бот</div></a>
-	  <a href="notcoin/index.html"><i>pan_tool</i><div>Тапалка</div></a>
+	  <a href="game.html"><i>pan_tool</i><div>Тапалка</div></a>
     <div class="small-divider"></div>
     <label class="grey-text">Курси </label>
-	  <a href="wigetBTC.html"><i><span class="material-symbols-outlined">show_chart</span></i><div>BTC</div></a>
+	  <a href="minichartwidget.html"><i><span class="material-symbols-outlined">show_chart</span></i><div>Mini Chart Widget</div></a>
 	  <a href="wigetTON.html"><i><span class="material-symbols-outlined">show_chart</span></i><div>TON</div></a>
 	  <a href="priceTAB.html"><i><span class="material-symbols-outlined">show_chart</span></i><div>TON price v.1</div></a>
 	  <a href="priceTON.html"><i><span class="material-symbols-outlined">show_chart</span></i><div>TON price v.2</div></a>
@@ -30,10 +30,10 @@ const modules = {
 	  <a href="codes.html"><i>touch_app</i><label>Коди</label></a>
 	  <a href="combo.html"><i>widgets</i><label>Комбо</label></a>
 	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><label>Бот</label></a>
-	  <a href="notcoin/index.html"><i>pan_tool</i><label>Тапалка</label></a>
+	  <a href="game.html"><i>pan_tool</i><label>Тапалка</label></a>
 
     <div class="divider"></div>
-	<a href="wigetBTC.html"><i><span class="material-symbols-outlined">show_chart</span></i><label>BTC</label></a>
+	<a href="minichartwidget.html"><i><span class="material-symbols-outlined">show_chart</span></i><label>Mini Chart Widget</label></a>
 	<a href="wigetTON.html"><i><span class="material-symbols-outlined">show_chart</span></i><label>TON </label></a>
     <a href="priceTAB.html"><i><span class="material-symbols-outlined">show_chart</span></i><label>TON price v.1 </label></a>
     <a href="priceTON.html"><i><span class="material-symbols-outlined">show_chart</span></i><label>TON price v.2 </label></a>
@@ -44,7 +44,7 @@ const modules = {
 	  <a href="codes.html"><i>touch_app</i><label>Коди</label></a>
 	  <a href="combo.html"><i>widgets</i><label>Комбо</label></a>
 	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><label>Бот</label></a>
-	  <a href="notcoin/index.html"><i>pan_tool</i><label>Тапалка</label></a>	
+	  <a href="game.html"><i>pan_tool</i><label>Тапалка</label></a>	
   `,
   n4: `
 <nav> 
@@ -53,7 +53,7 @@ const modules = {
 <h5 class="max center-align"></h5>
     		<button class="circle transparent s m" data-ui="#menu-menu">
           <i><span class="material-symbols-outlined">candlestick_chart</span></i><menu id="menu-menu" data-ui="menu-menu" class="no-wrap">
-            <a href="wigetBTC.html" class="row"><i><span class="material-symbols-outlined">show_chart</span></i><div class="max">BTC wiget</div></a>
+            <a href="minichartwidget.html" class="row"><i><span class="material-symbols-outlined">show_chart</span></i><div class="max">Mini Chart Widget</div></a>
             <a href="wigetTON.html" class="row"><i><span class="material-symbols-outlined">show_chart</span></i><div class="max">TON wiget</div></a>
             <a href="priceTAB.html" class="row"><i><span class="material-symbols-outlined">show_chart</span></i><div class="max">TON price v.1</div></a>
 			<a href="priceTON.html" class="row"><i><span class="material-symbols-outlined">show_chart</span></i><div class="max">TON price v.2</div></a>
