@@ -47,7 +47,9 @@ const modules = {
 	  <a href="notcoin/index.html"><i>pan_tool</i><label>Тапалка</label></a>	
   `,
   n4: `
-<nav>	
+<nav> 
+
+
 <h5 class="max center-align"></h5>
     		<button class="circle transparent s m" data-ui="#menu-menu">
           <i><span class="material-symbols-outlined">candlestick_chart</span></i><menu id="menu-menu" data-ui="menu-menu" class="no-wrap">

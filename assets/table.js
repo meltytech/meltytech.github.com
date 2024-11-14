@@ -1,8 +1,11 @@
 $(document).ready(function() {
     const websites = [
-        { name: "Tapswap", url: "https://t.me/tapswap_mirror_2_bot?start=r_546126984", interval: 32400, text: "22 листопада", logo: "assets/logo/tapswap.jpg" },
-        { name: "Сайт 2", url: "https://example2.com", interval: 7200, text: "Произвольный текст 2", logo: "assets/logo2.png" },
-        { name: "Сайт 3", url: "https://example3.com", interval: 10800, text: "Произвольный текст 3", logo: "assets/logo3.png" },
+        { name: "Tapswap", url: "https://t.me/tapswap_mirror_2_bot?start=r_546126984", interval: 21600, text: "22 листопада", logo: "assets/logo/tapswap.jpg" },
+        { name: "Wcoin", url: "https://t.me/wcoin_tapbot?start=NTQ2MTI2OTg0", interval: 28800, text: "5 грудня", logo: "https://cdn.discordapp.com/attachments/354880174652653568/1306567359267606548/wcoin.jpg?ex=6737232d&is=6735d1ad&hm=cc5c85245e284a68dea1433b4637f6558800bf05df6a76dcbd3d0cb28b38effa&" },
+        { name: "Blum", url: "https://t.me/BlumCryptoBot/app?startapp=ref_WH3EqllN7e", interval: 28800, text: "дуже скоро", logo: "https://media.discordapp.net/attachments/354880174652653568/1306566675893850152/blum.jpg?ex=6737228a&is=6735d10a&hm=1a8f10ad24e9e376c10ca8a4f83f06731ef67c3223ae06105fd8ee90bfddf913" },
+        { name: "NotPixel", url: "https://t.me/notpixel/app?startapp=f546126984", interval: 7200, text: "листопад", logo: "https://media.discordapp.net/attachments/354880174652653568/1306586289100947487/pixel.jpg?ex=673734ce&is=6735e34e&hm=e87f79f4996e0cf03f445bd840aee603a4b501e8990663c1f2623a571f33b77c&=&format=webp" },
+		
+		
         // Добавьте еще сайты по мере необходимости
     ];
 

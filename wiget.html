@@ -11,9 +11,9 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script> 
- <script src="assets/table.js"></script>
 <script src="assets/dark.js">	</script> 
-<link href="assets/style.css" rel="stylesheet"> 	  
+<link href="assets/style.css" rel="stylesheet"> 
+	  
  </head>
 <body class="dark">
 
@@ -22,7 +22,42 @@
 <nav id="nav-3" class="bottom s"> </nav> 
 <header id="nav-4" class="fixed responsive max surface"> </header> 
 
-<main class="responsive">
+<main class="responsive max">
+<style>
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.s12.m6.l3 {
+    flex: 1 1 calc(25% - 16px);
+    box-sizing: border-box;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+</style>
+
+
+
+
+    <div class="grid" id="widget-grid">
+        <div class="s12 m6 l3" data-symbol="BTCUSD"></div>
+        <div class="s12 m6 l3" data-symbol="BINANCE:ETHUSD"></div>
+        <!-- Добавьте еще виджеты по мере необходимости -->
+    </div>
+    <nav class="pagination">
+        <button id="prev-page">Предыдущая</button>
+        <span id="page-numbers"></span>
+        <button id="next-page">Следующая</button>
+    </nav>
 
 
 
@@ -32,21 +67,8 @@
 
 
 
-
-<div class="grid" id="website-grid"> <!-- Элементы будут добавлены динамически --> </div>
-
-
-
-
-
-
-
-
-
-
-
-	
 </main>
 <script src="assets/modules.js"></script>
+ <script src="assets/wiget.js"></script> 
 </body>
 </html>
