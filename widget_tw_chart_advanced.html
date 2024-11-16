@@ -1,0 +1,275 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" content="notranslate">
+    <title>MELTY</title>
+	  <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+<link href="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.css" rel="stylesheet">
+<script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="assets/table.js"></script>
+<script src="assets/dark.js">	</script> 
+<link href="assets/style.css" rel="stylesheet"> 
+
+    <style>
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        section.show-all {
+            display: block;
+        }
+        .pagination {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .circle {
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .fill {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+  
+ </head>
+<body class="dark">
+
+<nav id="nav-1" class="drawer left l scroll"> </nav>
+<nav id="nav-2" class="left m scroll"> </nav>
+<nav id="nav-3" class="bottom s"> </nav> 
+<header id="nav-4" class="fixed responsive max surface"> </header> 
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<main class="responsive">
+<div></div>
+<section class="active" id="section1">
+ 
+<div class="tabs scroll">
+
+  <a class="active" data-ui="#wDOGS">DOGS</a>
+  <a data-ui="#wX">X</a>
+  <a data-ui="#wCATS">CATS</a>    
+  <a data-ui="#wHMSTR">HMSTR</a>  
+  <a data-ui="#wNOT">NOT</a> 
+
+  
+</div>
+
+
+<div class="page " id="wNOT"><div class="s12 m12 l6">  <div id="NOTUSDT"> </div></div></div>
+<div class="page " id="wHMSTR"><div class="s12 m12 l6">  <div id="HMSTRUSDT"> </div></div></div>
+<div class="page active" id="wDOGS"><div class="s12 m12 l6">  <div id="DOGSUSDT"> </div></div></div>
+<div class="page " id="wX"><div class="s12 m12 l6">  <div id="XUSDT"> </div></div></div>
+<div class="page " id="wCATS"><div class="s12 m12 l6">  <div id="CATSUSDT"> </div></div></div>
+
+    </section>
+
+<section id="section2">
+ 
+<div class="tabs scroll">
+  <a class="active" data-ui="#wBTC">BTC</a>
+  <a data-ui="#wETH">ETH</a>
+  <a data-ui="#wBNB">BNB</a>
+  <a data-ui="#wLTC">LTC</a>
+  <a data-ui="#wSOL">SOL</a>
+  <a data-ui="#wETC">ETC</a>
+</div>
+
+<div class="page active" id="wBTC"><div class="s12 m12 l6">  <div id="BTCUSDT"> </div></div></div>
+<div class="page " id="wETH"><div class="s12 m12 l6">  <div id="ETHUSDT"> </div></div></div>
+<div class="page " id="wBNB"><div class="s12 m12 l6">  <div id="BNBUSDT"> </div></div></div>
+<div class="page " id="wLTC"><div class="s12 m12 l6">  <div id="LTCUSDT"> </div></div></div>
+<div class="page " id="wSOL"><div class="s12 m12 l6">  <div id="SOLUSDT"> </div></div></div>
+<div class="page " id="wETC"><div class="s12 m12 l6">  <div id="ETCUSDT"> </div></div></div>
+
+
+    </section>
+
+<section id="section3">
+ 
+<div class="tabs scroll">
+  <a class="active" data-ui="#wXRP">XRP</a>
+  <a data-ui="#wTRX">TRX</a>
+  <a data-ui="#wDOGE">DOGE</a>
+  <a data-ui="#wADA">ADA</a>
+  <a data-ui="#wXLM">XLM</a>
+</div>
+
+<div class="page active" id="wXRP"><div class="s12 m12 l6">  <div id="XRPUSDT"> </div></div></div>
+<div class="page " id="wTRX"><div class="s12 m12 l6">  <div id="TRXUSDT"> </div></div></div>
+<div class="page " id="wDOGE"><div class="s12 m12 l6">  <div id="DOGEUSDT"> </div></div></div>
+<div class="page " id="wADA"><div class="s12 m12 l6">  <div id="ADAUSDT"> </div></div></div>
+<div class="page " id="wXLM"><div class="s12 m12 l6">  <div id="XLMUSDT"> </div></div></div>
+
+    </section>
+
+<section id="section4">
+ 
+<div class="tabs scroll">
+  <a class="active" data-ui="#wBGB">BGB</a>
+  <a data-ui="#wBWB">BWB</a>
+  <a data-ui="#wTON">TON</a>
+</div>
+
+<div class="page active" id="wBGB"><div class="s12 m12 l6">  <div id="BGBUSDT"> </div></div></div>
+<div class="page " id="wBWB"><div class="s12 m12 l6">  <div id="BWBUSDT"> </div></div></div>
+<div class="page " id="wTON"><div class="s12 m12 l6">  <div id="TONUSDT"> </div></div></div>
+    </section>
+
+<section id="section5">
+ 
+<div class="tabs scroll">
+  <a class="active" data-ui="#wBONK">BONK</a>
+  <a data-ui="#wPEPE">PEPE</a>
+  <a data-ui="#wSHIB">SHIB</a>
+
+</div>
+
+<div class="page active" id="wBONK"><div class="s12 m12 l6">  <div id="BONKUSDT"> </div></div></div>
+<div class="page " id="wPEPE"><div class="s12 m12 l6">  <div id="PEPEUSDT"> </div></div></div>
+<div class="page " id="wSHIB"><div class="s12 m12 l6">  <div id="SHIBUSDT"> </div></div></div>
+    </section>
+
+
+ <nav class="pagination">
+        <button class="circle" id="prev-page"><i>keyboard_arrow_left</i></button>
+        <button class="circle" id="next-page"><i>keyboard_arrow_right</i></button>
+        <button class="circle" id="show-all"><i>expand_all</i></button>
+    </nav>
+
+
+    <script>
+        $(document).ready(function() {
+            const sections = $('section');
+            let currentSection = 1;
+
+            function showSection(section) {
+                sections.removeClass('active').removeClass('show-all');
+                $('#section' + section).addClass('active');
+
+                $('.pagination button[data-section]').removeClass('fill');
+                $('.pagination button[data-section="' + section + '"]').addClass('fill');
+
+                currentSection = section;
+            }
+
+            function showAllSections() {
+                sections.addClass('show-all');
+                $('.pagination button[data-section]').removeClass('fill');
+                $('#show-all').addClass('fill');
+            }
+
+            $('.pagination button[data-section]').on('click', function() {
+                const section = $(this).data('section');
+                showSection(section);
+            });
+
+            $('#prev-page').on('click', function() {
+                if (currentSection > 1) {
+                    showSection(currentSection - 1);
+                }
+            });
+
+            $('#next-page').on('click', function() {
+                if (currentSection < sections.length) {
+                    showSection(currentSection + 1);
+                }
+            });
+
+            $('#show-all').on('click', function() {
+                showAllSections();
+            });
+
+            // Initialize the first section
+            showSection(1);
+        });
+    </script>
+ 
+    
+<script>  
+ function createTradingViewWidget(containerId, symbol) {
+    new TradingView.widget({
+        "width": "100%",
+        "height": "550px",
+        "symbol": symbol,
+        "interval": "60",
+        "timezone": "Etc/UTC",
+        "theme": 'dark',
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+
+        "allow_symbol_change": true,
+        "calendar": false,
+
+        "container_id": containerId
+    });
+}
+
+$(document).ready(function() {
+    createTradingViewWidget("BTCUSDT", "BINANCE:BTCUSDT");
+    createTradingViewWidget("ETHUSDT", "BINANCE:ETHUSDT");
+    createTradingViewWidget("BNBUSDT", "BINANCE:BNBUSDT");
+    createTradingViewWidget("LTCUSDT", "BINANCE:LTCUSDT");
+    createTradingViewWidget("SOLUSDT", "BINANCE:SOLUSDT");
+    createTradingViewWidget("ETCUSDT", "BINANCE:ETCUSDT");
+	
+    createTradingViewWidget("XRPUSDT", "BINANCE:XRPUSDT");
+    createTradingViewWidget("TRXUSDT", "BINANCE:TRXUSDT");
+    createTradingViewWidget("DOGEUSDT", "BINANCE:DOGEUSDT");
+    createTradingViewWidget("ADAUSDT", "BINANCE:ADAUSDT");
+    createTradingViewWidget("XLMUSDT", "BINANCE:XLMUSDT");
+
+    createTradingViewWidget("BGBUSDT", "BGBUSDT");
+    createTradingViewWidget("BWBUSDT", "BWBUSDT");
+    createTradingViewWidget("TONUSDT", "BINANCE:TONUSDT");
+
+    createTradingViewWidget("SHIBUSDT", "BINANCE:SHIBUSDT");	
+    createTradingViewWidget("PEPEUSDT", "BINANCE:PEPEUSDT");
+    createTradingViewWidget("BONKUSDT", "BINANCE:BONKUSDT");
+
+
+    
+    createTradingViewWidget("NOTUSDT", "BINANCE:NOTUSDT");
+    createTradingViewWidget("HMSTRUSDT", "BINANCE:HMSTRUSDT");
+    createTradingViewWidget("DOGSUSDT", "BINANCE:DOGSUSDT");
+    createTradingViewWidget("XUSDT", "XUSDT");
+    createTradingViewWidget("CATSUSDT", "CATSUSDT");
+    
+});   
+</script>  	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</main>
+
+<script src="assets/modules.js"></script>
+</body>
+</html>
