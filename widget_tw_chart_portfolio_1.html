@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" content="notranslate">
+    <title>MELTY</title>
+	  <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+<link href="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.css" rel="stylesheet">
+<script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+<script src="assets/dark.js">	</script> 
+<link href="assets/style.css" rel="stylesheet">
+    <style>
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        section.show-all {
+            display: block;
+        }
+        .pagination {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .circle {
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .fill {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+
+
+
+
+	
+ </head>
+<body class="dark">
+
+<nav id="nav-1" class="drawer left l scroll"> </nav>
+<nav id="nav-2" class="left m scroll"> </nav>
+<nav id="nav-3" class="bottom s"> </nav> 
+<header id="nav-4" class="fixed responsive max surface"> </header> 
+
+<main class="responsive max">
+
+<div></div>
+
+<div class="grid" id="widget-container">
+  <!-- Виджеты будут загружаться здесь -->
+</div>
+
+
+
+    <nav class="pagination">
+	
+<button id="load-more">Показать больше</button>	
+	
+	
+
+    </nav>
+
+
+
+
+<script type="text/javascript">
+const widgetParams = [
+  { containerId: 'widget-STRK', symbol: 'BINANCE:STRKUSDT' },
+  { containerId: 'widget-APT', symbol: 'BINANCE:APTUSDT' },
+  { containerId: 'widget-ZK', symbol: 'BINANCE:ZKUSDT' },
+  { containerId: 'widget-ZRO', symbol: 'BINANCE:ZROUSDT' },  
+  { containerId: 'widget-APE', symbol: 'BINANCE:APEUSDT' },  
+  
+  
+  
+  
+  
+  
+    { containerId: 'widget-THE', symbol: 'THEUSDT' }
+];
+
+let currentIndex = 0;
+const itemsPerPage = 4;
+
+function createWidgetContainer(containerId) {
+  const container = document.createElement('div');
+  container.className = 's12 m6 l3';
+  container.id = containerId;
+  document.getElementById('widget-container').appendChild(container);
+}
+
+function createTradingViewWidget(containerId, symbol) {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
+  script.async = true;
+
+  const config = {
+    symbol: symbol,
+    height: 220,
+    locale: "en",
+    dateRange: "1M",
+    colorTheme: "dark",
+    trendLineColor: "#37a6ef",
+    underLineColor: "rgba(55, 166, 239, 0.15)",
+    isTransparent: false,
+    autosize: false,
+    largeChartUrl: ""
+  };
+
+  script.innerHTML = JSON.stringify(config);
+  document.getElementById(containerId).appendChild(script);
+}
+
+function loadMoreWidgets() {
+  for (let i = 0; i < itemsPerPage; i++) {
+    if (currentIndex >= widgetParams.length) {
+      document.getElementById('load-more').style.display = 'none';
+      break;
+    }
+    createWidgetContainer(widgetParams[currentIndex].containerId);
+    createTradingViewWidget(widgetParams[currentIndex].containerId, widgetParams[currentIndex].symbol);
+    currentIndex++;
+  }
+}
+
+document.getElementById('load-more').addEventListener('click', loadMoreWidgets);
+
+// Инициализируем первую загрузку виджетов
+loadMoreWidgets();
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</main>
+<script src="assets/modules.js"></script>
+</body>
+</html>

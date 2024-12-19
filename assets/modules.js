@@ -19,7 +19,7 @@ const modules = {
 	  <a href="widget_tw_chart_advanced.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Advanced Chart</div></a>
 	  <a href="widget_tw_chart_personal.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Personal Chart</div></a>
 	  <a href="widget_tw_chart_heatmap.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Heatmap</div></a>
-
+      <a href="widget_tw_chart_portfolio_1.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Portfolio 1</div></a>
 	  
 
   `,
@@ -37,6 +37,7 @@ const modules = {
 	<a href="widget_tw_chart_advanced.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><label>Advanced</label></a>
     <a href="widget_tw_chart_personal.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><label>Personal</label></a>
     <a href="widget_tw_chart_heatmap.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><label>Heatmap</label></a>
+	<a href="widget_tw_chart_portfolio_1.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><label>Portfolio 1</label></a>
 	
   `,
     n3: `
