@@ -64,12 +64,28 @@
 
 
 
+/* Общие стили для ряда */
+.row.scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.row.scroll article {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+
+    border: 1px solid #444;
+    color: white;
+}
+
 /* Скрытие полосы прокрутки для экранов менее 600px */
 @media (max-width: 600px) {
     .row.scroll {
         overflow-x: hidden;
     }
 }
+
 
 
 
@@ -200,5 +216,25 @@
 </main>
 
 <script src="assets/modules.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const row = document.getElementById('scrollable-row');
+
+    let startX;
+    let scrollLeft;
+
+    row.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].pageX - row.offsetLeft;
+        scrollLeft = row.scrollLeft;
+    });
+
+    row.addEventListener('touchmove', (e) => {
+        const x = e.touches[0].pageX - row.offsetLeft;
+        const walk = (x - startX) * 2; // Увеличение чувствительности к свайпу
+        row.scrollLeft = scrollLeft - walk;
+    });
+});
+</script>
 </body>
 </html>
