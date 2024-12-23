@@ -21,7 +21,9 @@
 <script src="assets/dark.js">	</script> 
 <link href="assets/style.css" rel="stylesheet"> 
 
+<style>
 
+</style>
  </head>
 <body class="dark">
 
@@ -35,7 +37,45 @@
 
 <main class="responsive">
 
+<style>
+/* Общие стили для вкладок */
+.tabs.min.scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+}
 
+.tabs.min.scroll a {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.tabs.min.scroll a.active {
+    font-weight: bold;
+}
+
+/* Скрытие полосы прокрутки для экранов менее 600px */
+@media (max-width: 600px) {
+    .tabs.min.scroll {
+        overflow: hidden;
+    }
+}
+
+
+
+/* Скрытие полосы прокрутки для экранов менее 600px */
+@media (max-width: 600px) {
+    .row.scroll {
+        overflow-x: hidden;
+    }
+}
+
+
+
+
+
+</style>
 
   <div class="tabs min scroll">
     <a class="active" data-ui="#tap1"> Кошелек</a>
@@ -152,62 +192,6 @@
 
 
 
-
-
-<nav class="tabbed scroll">
-    <a data-ui="#page1" class="active">
-      <i>info</i>
-      <span>Overview</span>
-    </a>
-    <a data-ui="#page2">
-      <i>style</i>
-      <span>Specs</span>
-    </a>
-    <a data-ui="#page3">
-      <i>design_services</i>
-      <span>Guidelines</span>
-    </a>
-    <a data-ui="#page4">
-      <i>accessibility_new</i>
-      <span>Acessibility</span>
-    </a>
-	
-    <a data-ui="#page5">
-      <i>accessibility_new</i>
-      <span>Погода</span>
-    </a>	
-    <a data-ui="#page6">
-      <i>accessibility_new</i>
-      <span>Видео</span>
-    </a>	
-    <a data-ui="#page7">
-      <i>accessibility_new</i>
-      <span>Музыка</span>
-    </a>		
-	
-	
-  </nav>
-  <div id="page1" class="page padding active">
-    <h5>Overview</h5>
-  </div>
-  <div id="page2" class="page padding">
-    <h5>Specs</h5>
-  </div>
-  <div id="page3" class="page padding">
-    <h5>Guidelines</h5>
-  </div>
-  <div id="page4" class="page padding">
-    <h5>Acessibility</h5>
-  </div>
-  <div id="page5" class="page padding">
-    <h5>Acessibility</h5>
-  </div>
-  <div id="page6" class="page padding">
-    <h5>Acessibility</h5>
-  </div>
-  <div id="page7" class="page padding">
-    <h5>Acessibility</h5>
-  </div>
 
 
 
