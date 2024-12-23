@@ -1,3 +1,6 @@
+@import url('dark.css');
+
+
 .logo {
   display: inline-block;
   width: 50px; /* Размер иконки */

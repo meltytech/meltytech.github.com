@@ -38,62 +38,23 @@
 <main class="responsive">
 
 <style>
-/* Общие стили для вкладок */
-.tabs.min.scroll {
-    overflow-x: auto;
-    white-space: nowrap;
-}
 
-.tabs.min.scroll a {
-    display: inline-block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-}
-
-.tabs.min.scroll a.active {
-    font-weight: bold;
-}
 
 /* Скрытие полосы прокрутки для экранов менее 600px */
-@media (max-width: 600px) {
+@media (max-width: 2000px) {
+    .row.scroll,
     .tabs.min.scroll {
-        overflow: hidden;
+        overflow-x: hidden; /* Скрытие полосы прокрутки */
+        touch-action: pan-x; /* Включение свайпа по горизонтали */
     }
 }
-
-
-
-/* Общие стили для ряда */
-.row.scroll {
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.row.scroll article {
-    display: inline-block;
-    padding: 10px;
-    margin: 10px;
-
-    border: 1px solid #444;
-    color: white;
-}
-
-/* Скрытие полосы прокрутки для экранов менее 600px */
-@media (max-width: 600px) {
-    .row.scroll {
-        overflow-x: hidden;
-    }
-}
-
-
 
 
 
 
 </style>
 
-  <div class="tabs min scroll">
+  <div class="tabs min scroll" id="scrollable-tabs">
     <a class="active" data-ui="#tap1"> Кошелек</a>
     <a data-ui="#tap2"> Игры </a>
     <a data-ui="#tap3"> Медиа </a>
@@ -103,7 +64,21 @@
   </div>
   <div id="tap1" class="page left padding active">
     <h5> Tab 1 </h5>
-	<div class="row scroll">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="row scroll" id="scrollable-row">
+	
   <article class="small-width border">
     <h5>Title </h5>
     <p>Some text here</p>
@@ -216,25 +191,7 @@
 </main>
 
 <script src="assets/modules.js"></script>
+<script src="assets/scroll.js"></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const row = document.getElementById('scrollable-row');
-
-    let startX;
-    let scrollLeft;
-
-    row.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].pageX - row.offsetLeft;
-        scrollLeft = row.scrollLeft;
-    });
-
-    row.addEventListener('touchmove', (e) => {
-        const x = e.touches[0].pageX - row.offsetLeft;
-        const walk = (x - startX) * 2; // Увеличение чувствительности к свайпу
-        row.scrollLeft = scrollLeft - walk;
-    });
-});
-</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-let mode = "dark";
+let mode = "auto";
 
 const updateTheme = () => {
   let darkOrLight = document.body.className.indexOf("dark") !== -1 ? "light" : "dark";
