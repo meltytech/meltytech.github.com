@@ -21,39 +21,29 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* Общее оформление */
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Горизонтальное расположение блоков и выравнивание слева */
+/* Центрирование и выравнивание блоков */
 .sitelist {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Выравнивание слева */
+    justify-content: center; /* Центрирование элементов */
 }
 
 .blocksite {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%; /* Можно изменить в зависимости от требуемой ширины */
-    margin-bottom: 15px;
+    width: calc(33.333% - 20px); /* Ширина блока с учетом отступов */
+    margin: 10px; /* Отступы между блоками */
 }
 
 .blocksite img {
-    width: 100px; /* Ширина изображения */
-    height: 100px; /* Высота изображения */
+    width: 90px; /* Ширина изображения */
+    height: 90px; /* Высота изображения */
     object-fit: cover;
     margin-bottom: 5px; /* Отступ снизу */
 }
@@ -63,5 +53,20 @@ body {
     text-align: center;
 }
 
-/* Стиль для подзаголовков */ 
-.subtitle { margin-bottom: 15px; }
+/* Стиль для подзаголовков */
+.subtitle {
+    margin-bottom: 15px;
+}
+
+/* Прокрутка для small экранов */
+@media (max-width: 300px) {
+    .sitelist {
+        flex-direction: column;
+        align-items: center; /* Центрирование элементов в колонке */
+    }
+
+    .blocksite {
+        width: 100%; /* Блоки занимают всю ширину */
+        margin: 10px 0; /* Отступы между блоками */
+    }
+}
