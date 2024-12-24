@@ -15,6 +15,6 @@
     .row.scroll,
     .tabs.min.scroll {
         overflow-x: hidden; /* Скрытие полосы прокрутки */
-        touch-action: pan-x; /* Включение свайпа по горизонтали */
+        touch-action: pan-x; /* Включение свайпа по горизонтали */ 
     }
 }
