@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const elements = [
         document.getElementById('scrollable-row'), 
+		document.getElementById('scrollable-row2'),
         document.getElementById('scrollable-tabs')
     ];
 
@@ -44,5 +45,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function centerElement(element) {
+        const elementRect = element.getBoundingClientRect();
+        const parentRect = element.parentElement.getBoundingClientRect();
+        const offset = (parentRect.width / 2) - (elementRect.width / 2);
+        element.parentElement.scrollTo({
+            left: element.offsetLeft - offset,
+            behavior: 'smooth'
+        });
+    }
+
     elements.forEach(enableScroll);
+
+    // Добавление кликабельности для scrollable-tabs
+    const tabs = document.getElementById('scrollable-tabs');
+    const tabLinks = tabs.querySelectorAll('a');
+
+    tabLinks.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+            e.preventDefault();
+            tabLinks.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            centerElement(tab);
+        });
+    });
 });
