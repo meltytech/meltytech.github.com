@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const elements = [
         document.getElementById('scrollable-row'), 
-		document.getElementById('scrollable-row2'),
         document.getElementById('scrollable-tabs')
     ];
 
