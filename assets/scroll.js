@@ -48,10 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const elementRect = element.getBoundingClientRect();
         const parentRect = element.parentElement.getBoundingClientRect();
         const offset = (parentRect.width / 2) - (elementRect.width / 2);
-        element.parentElement.scrollTo({
-            left: element.offsetLeft - offset,
-            behavior: 'smooth'
-        });
+        setTimeout(() => {
+            element.parentElement.scrollTo({
+                left: element.offsetLeft - offset,
+                behavior: 'smooth'
+            });
+        }, 50); // Небольшая задержка для избежания "прыжков"
     }
 
     elements.forEach(enableScroll);
