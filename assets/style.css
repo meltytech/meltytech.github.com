@@ -18,3 +18,50 @@
         touch-action: pan-x; /* Включение свайпа по горизонтали */ 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Общее оформление */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Горизонтальное расположение блоков и выравнивание слева */
+.sitelist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Выравнивание слева */
+}
+
+.blocksite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; /* Можно изменить в зависимости от требуемой ширины */
+    margin-bottom: 15px;
+}
+
+.blocksite img {
+    width: 100px; /* Ширина изображения */
+    height: 100px; /* Высота изображения */
+    object-fit: cover;
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+.textsite {
+    margin: 10px;
+    text-align: center;
+}
+
+/* Стиль для подзаголовков */ 
+.subtitle { margin-bottom: 15px; }
