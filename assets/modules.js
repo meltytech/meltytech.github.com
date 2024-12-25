@@ -1,4 +1,51 @@
 const modules = {
+  
+    n0: `
+  	    <dialog id="dialog-max" class="max">
+  <nav>
+    <button class="circle transparent">
+      <i>check_box</i>
+    </button>
+    <button class="circle transparent">
+      <i>brush</i>
+    </button>
+    <button class="circle transparent">
+      <i>mic</i>
+    </button>
+    <button class="circle transparent">
+      <i>image</i>
+    </button>
+	    		<button class="circle transparent" data-ui="#menu-menu">
+          <i><span class="material-symbols-outlined">candlestick_chart</span></i><menu id="menu-menu" data-ui="menu-menu" class="no-wrap">
+            <a href="widget_tw_chart_mini.html" class="row"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div class="max">Mini Chart</div></a>
+            <a href="widget_tw_chart_advanced.html" class="row"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div class="max">Advanced Chart</div></a>
+            <a href="widget_tw_chart_personal.html" class="row"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div class="max">Personal Chart</div></a>
+			<a href="widget_tw_chart_heatmap.html" class="row"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div class="max">Heatmap</div></a>
+          </menu>
+        </button>
+	 <button class="transparent circle" onclick="updateTheme()"><i id="dark" style="display: none">light_mode</i><i id="light">dark_mode</i></button>
+      <button class="transparent circle" onclick="refresh()"><i>refresh</i></button>
+    <div class="max"></div>
+
+  </nav>
+  
+  
+  
+  
+  
+     
+	  
+	  
+	  
+	  
+      <nav class="right-align">
+        <button data-ui="#dialog-max" class="border">Cancel</button>
+        <button data-ui="#dialog-max">Confirm</button>
+      </nav>
+   </dialog>   
+  `,  
+  
+  
   n1: `
 
     <header>
@@ -10,10 +57,9 @@ const modules = {
     </header>
 	  <a href="index.html"><i>home</i><div>Головна</div></a>
 	  <a href="codes.html"><i>touch_app</i><div>Коди</div></a>
-	  <a href="combo.html"><i>widgets</i><div>Комбо</div></a>
-	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><div>Бот</div></a>	  
+	  <a href="combo.html"><i>widgets</i><div>Комбо</div></a>	  
 	  <a href="game.html"><i>pan_tool</i><div>Тапалка</div></a>
-	  <a href="#" data-ui="#dialog-max"><i>rocket_launch</i><div>Все</div></a>
+      <a href="#" data-ui="#dialog-max"><i>menu</i><div>Больше</div></a>
 	  
 	  
 	     
@@ -55,9 +101,8 @@ const modules = {
 	  <a href="index.html"><i>home</i><label>Головна</label></a>
 	  <a href="codes.html"><i>touch_app</i><label>Коди</label></a>
 	  <a href="combo.html"><i>widgets</i><label>Комбо</label></a>
-	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><label>Бот</label></a>
 	  <a href="game.html"><i>pan_tool</i><label>Тапалка</label></a>
-<a href="#" data-ui="#dialog-max"><i>rocket_launch</i><div>Все</div></a>
+      <a href="#" data-ui="#dialog-max"><i>menu</i><div>Больше</div></a>
     <div class="divider"></div>
 	<a href="widget_tw_chart_mini.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><label>Mini</label></a>
 	<a href="widget_tw_chart_advanced.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><label>Advanced</label></a>
@@ -70,9 +115,8 @@ const modules = {
 <a href="index.html"><i>home</i><label>Головна</label></a>
 	  <a href="codes.html"><i>touch_app</i><label>Коди</label></a>
 	  <a href="combo.html"><i>widgets</i><label>Комбо</label></a>
-	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><label>Бот</label></a>
 	  <a href="game.html"><i>pan_tool</i><label>Тапалка</label></a>
-<a href="#" data-ui="#dialog-max"><i>rocket_launch</i><div>Все</div></a>	  
+      <a href="#" data-ui="#dialog-max"><i>menu</i><div>Больше</div></a>  
   `,
   n4: `
 <nav> 
@@ -113,6 +157,7 @@ const modules = {
 };
 
 $(document).ready(function() { 
+$('#nav-0').html(modules.n0);
 $('#nav-1').html(modules.n1); 
 $('#nav-2').html(modules.n2); 
 $('#nav-3').html(modules.n3);
@@ -122,3 +167,12 @@ $('#toggle-nav1').click(function(event) { event.preventDefault();
 $('#nav-1').toggle(); // Переключает видимость контента 
 }); 
 });
+
+
+
+
+
+
+
+
+
