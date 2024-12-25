@@ -42,8 +42,8 @@ body {
 }
 
 .blocksite img {
-    width: 90px; /* Ширина изображения */
-    height: 90px; /* Высота изображения */
+    width: 80px; /* Ширина изображения */
+    height: 80px; /* Высота изображения */
     object-fit: cover;
     margin-bottom: 5px; /* Отступ снизу */
 }

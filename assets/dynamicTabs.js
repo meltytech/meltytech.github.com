@@ -7,19 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     subtitle: "Telegram Wallet",
                     sites: [
                         { name: "Telegram Wallet", img: "img/wallet.jpg", link: "https://t.me/wallet" },
-                        { name: "Bitget Wallet Lite", img: "img/BitgetWalletLite.jpg", link: "https://t.me/BitgetWallet_TGBot" },
+                        { name: "Bitget Wallet Lite", img: "img/BitgetWalletLite.jpg", link: "https://t.me/BitgetWallet_TGBot/BGW?startapp=home-SPNNiCsdveNmxDq" },
                         { name: "OKX Wallet", img: "img/OKX_WALLET_BOT.jpg", link: "https://t.me/OKX_WALLET_BOT" }
                     ]
                 },
                 {
-                    subtitle: "Android Wallet",
+                    subtitle: "Крипто биржа & P2P",
                     sites: [
-                        { name: "Site Name 7", img: "img/0.png", link: "https://example.com" },
-                        { name: "Site Name 8", img: "img/0.png", link: "https://example.com" },
-						{ name: "Site Name 8", img: "img/0.png", link: "https://example.com" },
-						{ name: "Site Name 8", img: "img/0.png", link: "https://example.com" },
-						{ name: "Site Name 8", img: "img/0.png", link: "https://example.com" },
-                        { name: "", img: "img/0.png", link: "" }
+                        { name: "Bitget", img: "img/bitget.webp", link: "https://share.bitget.com/u/RZL4TF0Z&shareid=telegram" },
+                        { name: "Binance", img: "img/Binance.webp", link: "https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00VSP13GGI" },
+						{ name: "OKX", img: "img/okx.webp", link: "https://okx.com/join/35451622" },
+						{ name: "Bybit", img: "img/Bybit.webp", link: "https://www.bybit.com/invite?ref=E5R5OBO" },
+						{ name: "KuCoin", img: "img/KuCoin.webp", link: "https://www.kucoin.com/r/rf/K4N2PMN1" },
+                        { name: "Gate", img: "img/Gate.webp", link: "https://www.gate.io/signup/VLJCVQ8KCA?ref_type=102" }
                     ]
                 }
             ]
@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const link = document.createElement('a');
                 link.href = site.link; // Ссылка на сайт
+				
 
                 const img = document.createElement('img');
                 img.classList.add('circle', 'extra');

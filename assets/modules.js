@@ -11,8 +11,34 @@ const modules = {
 	  <a href="index.html"><i>home</i><div>Головна</div></a>
 	  <a href="codes.html"><i>touch_app</i><div>Коди</div></a>
 	  <a href="combo.html"><i>widgets</i><div>Комбо</div></a>
-	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><div>Бот</div></a>
+	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><div>Бот</div></a>	  
 	  <a href="game.html"><i>pan_tool</i><div>Тапалка</div></a>
+	  <a href="#" data-ui="#dialog-max"><i>rocket_launch</i><div>Все</div></a>
+	  
+	  
+	     
+
+  
+
+  
+
+
+  
+
+  
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
     <div class="small-divider"></div>
     <label class="grey-text">TradingView Widget</label>
 	  <a href="widget_tw_chart_mini.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Mini Chart</div></a>
@@ -31,7 +57,7 @@ const modules = {
 	  <a href="combo.html"><i>widgets</i><label>Комбо</label></a>
 	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><label>Бот</label></a>
 	  <a href="game.html"><i>pan_tool</i><label>Тапалка</label></a>
-
+<a href="#" data-ui="#dialog-max"><i>rocket_launch</i><div>Все</div></a>
     <div class="divider"></div>
 	<a href="widget_tw_chart_mini.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><label>Mini</label></a>
 	<a href="widget_tw_chart_advanced.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><label>Advanced</label></a>
@@ -45,7 +71,8 @@ const modules = {
 	  <a href="codes.html"><i>touch_app</i><label>Коди</label></a>
 	  <a href="combo.html"><i>widgets</i><label>Комбо</label></a>
 	  <a href="https://t.me/meltygame_bot"><i>rocket_launch</i><label>Бот</label></a>
-	  <a href="game.html"><i>pan_tool</i><label>Тапалка</label></a>	
+	  <a href="game.html"><i>pan_tool</i><label>Тапалка</label></a>
+<a href="#" data-ui="#dialog-max"><i>rocket_launch</i><div>Все</div></a>	  
   `,
   n4: `
 <nav> 
@@ -79,7 +106,7 @@ const modules = {
 	  <a href="https://dropstab.com/p/main-sqp8u3e9cf" target="_blank"><i>code</i><span>Portfolio</span></a>
 	  </nav>
 	  </dialog>
-	  	  	 	  
+	  	 	  
 
     </nav>
   `
