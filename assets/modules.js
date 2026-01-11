@@ -92,7 +92,9 @@ const modules = {
 	  <a href="widget_tw_chart_personal.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Personal Chart</div></a>
 	  <a href="widget_tw_chart_heatmap.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Heatmap</div></a>
       <a href="widget_tw_chart_portfolio_1.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Portfolio 1</div></a>
-	  
+      <a href="widget_tw_chart_mini_week.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Mini Chart Week</div></a>
+      <a href="widget_tw_chart_mini_month.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Mini Chart Month</div></a>	  
+      <a href="widget_tw_chart_mini_year.html"><i><span class="material-symbols-outlined">candlestick_chart</span></i><div>Mini Chart Year</div></a>	  
 
   `,
   n2: `

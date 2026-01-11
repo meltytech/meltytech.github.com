@@ -1,17 +1,18 @@
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google" content="notranslate">
     <title>MELTY</title>
-	  <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-<link href="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.css" rel="stylesheet">
-<script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
-<script src="assets/dark.js">	</script> 
-<link href="assets/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    <script src="assets/dark.js"></script> 
+    <link href="assets/style.css" rel="stylesheet">
     <style>
         section {
             display: none;
@@ -39,12 +40,7 @@
             color: white;
         }
     </style>
-
-
-
-
-	
- </head>
+</head>
 <body class="dark">
 
 <nav id="nav-1" class="drawer left l scroll"> </nav>
@@ -53,215 +49,177 @@
 <header id="nav-4" class="fixed responsive max surface"> </header> 
 
 <main class="responsive max">
-
-<div></div>
-
-	<section class="active" id="section1">
-
-<div class="grid">
-  <div class="s12 m6 l3" id="widget-BTC"></div>
-  <div class="s12 m6 l3" id="widget-ETH"></div>
-  <div class="s12 m6 l3" id="widget-LTC"></div>
-  <div class="s12 m6 l3" id="widget-XRP"></div>
-  <div class="s12 m6 l3" id="widget-TRX"></div>
-  <div class="s12 m6 l3" id="widget-DOGE"></div>
-  <div class="s12 m6 l3" id="widget-BNB"></div>
-  <div class="s12 m6 l3" id="widget-TON"></div>
-  <div class="s12 m6 l3" id="widget-BGB"></div>
-  <div class="s12 m6 l3" id="widget-BWB"></div>
-  <div class="s12 m6 l3" id="widget-ADA"></div>
-  <div class="s12 m6 l3" id="widget-XLM"></div>
-</div>
-
-    </section>
-		
-    <section id="section2">
-
-<div class="grid">
-  <div class="s12 m6 l3" id="widget-NOT"></div>
-  <div class="s12 m6 l3" id="widget-DOGS"></div>
-  <div class="s12 m6 l3" id="widget-HMSTR"></div>
-  <div class="s12 m6 l3" id="widget-CATS"></div>
-  <div class="s12 m6 l3" id="widget-X"></div>
-  <div class="s12 m6 l3" id="widget-CATI"></div>
-  <div class="s12 m6 l3" id="widget-MEMEFI"></div>
-<div class="s12 m6 l3" id="widget-MAJOR"></div>   
-<div class="s12 m6 l3" id="widget-GOATS"></div>  
-  <div class="s12 m6 l3" id="widget-TOMA"></div>
-  <div class="s12 m6 l3" id="widget-PUFFER"></div>
-  <div class="s12 m6 l3" id="widget-CROS"></div>
- 
-  
-</div>
-
-    </section>
-	
-    <section id="section3">
-
-<div class="grid">
-  <div class="s12 m6 l3" id="widget-SHIB"></div>
-  <div class="s12 m6 l3" id="widget-PEPE"></div>
-  <div class="s12 m6 l3" id="widget-BONK"></div>
-   <div class="s12 m6 l3" id="widget-FLOKI"></div>
-    <div class="s12 m6 l3" id="widget-ZRC"></div> 
-  <div class="s12 m6 l3" id="widget-PEAQ"></div>
-
-
-	
-</div>
-
-    </section>
-
-
-
-
+  <div></div>
+  <div class="grid" id="widget-container">
+      <!-- Виджеты будут загружаться здесь -->
+  </div>
+  <nav class="pagination" id="pagination">
+      <!-- Кнопки постраничной навигации будут созданы здесь -->
+      <button class="circle" id="load-more"><i>expand_all</i></button>
+  </nav>
+</main>
+<nav id="nav-0"> </nav> 
+<script src="assets/modules.js"></script>
 <script type="text/javascript">
-  const widgetParams = [
+const widgetParams = [  
     { containerId: 'widget-BTC', symbol: 'BTCUSD' },
     { containerId: 'widget-ETH', symbol: 'ETHUSD' },
     { containerId: 'widget-LTC', symbol: 'LTCUSD' },
     { containerId: 'widget-XRP', symbol: 'XRPUSD' },
     { containerId: 'widget-TRX', symbol: 'TRXUSD' },
     { containerId: 'widget-DOGE', symbol: 'DOGEUSD' },
-    { containerId: 'widget-BNB', symbol: 'BNBUSD' },
+    { containerId: 'widget-BNB', symbol: 'BNBUSD' },		
     { containerId: 'widget-TON', symbol: 'TONUSD' },
     { containerId: 'widget-BGB', symbol: 'BGBUSDT' },
-    { containerId: 'widget-BWB', symbol: 'BITGET:BWBUSDT' },
+    { containerId: 'widget-SOL', symbol: 'SOLUSDT' },
     { containerId: 'widget-ADA', symbol: 'BINANCE:ADAUSDT' },
-    { containerId: 'widget-XLM', symbol: 'BINANCE:XLMUSDT' },	
-	
+    { containerId: 'widget-XLM', symbol: 'BINANCE:XLMUSDT' },
+
     { containerId: 'widget-NOT', symbol: 'NOTUSDT' },
     { containerId: 'widget-DOGS', symbol: 'BINANCE:DOGSUSDT' },
     { containerId: 'widget-HMSTR', symbol: 'BINANCE:HMSTRUSDT' },
-    { containerId: 'widget-CATS', symbol: 'BITGET:CATSUSDT' },
-    { containerId: 'widget-X', symbol: 'XUSDT' },
-    { containerId: 'widget-CATI', symbol: 'BINANCE:CATIUSDT' },
+	{ containerId: 'widget-X', symbol: 'XUSDT' },	
+    { containerId: 'widget-MAJOR', symbol: 'MAJORUSDT' },
+    { containerId: 'widget-PAWS', symbol: 'PAWSUSDT' },	
+	{ containerId: 'widget-BLUM', symbol: 'BITGET:BLUMUSDT' },
+	{ containerId: 'widget-CATI', symbol: 'BITGET:CATIUSDT' },
+	{ containerId: 'widget-TRADOOR', symbol: 'BITGET:TRADOORUSDT' },
+    { containerId: 'widget-GOMINING', symbol: 'BITGET:GOMININGUSDT' },
+	{ containerId: 'widget-DUCK', symbol: 'BITGET:DUCKUSDT' },	
+	{ containerId: 'widget-EVAA', symbol: 'EVAAUSDT' },	
+	
+
+
 	
 	
-	
-    { containerId: 'widget-PEAQ', symbol: 'BITGET:PEAQUSDT' },
-    { containerId: 'widget-TOMA', symbol: 'TOMAUSDT' },
-    { containerId: 'widget-PUFFER', symbol: 'BITGET:PUFFERUSDT' },
-    { containerId: 'widget-CROS', symbol: 'BITGET:CROSUSDT' },
-    { containerId: 'widget-MEMEFI', symbol: 'MEMEFIUSDT' },
-    { containerId: 'widget-MAJOR', symbol: 'MAJORUSDT' },	
-    { containerId: 'widget-GOATS', symbol: 'GOATSUSDT' },
 	
     { containerId: 'widget-SHIB', symbol: 'BINANCE:SHIBUSDT' },
     { containerId: 'widget-PEPE', symbol: 'BINANCE:PEPEUSDT' },
     { containerId: 'widget-BONK', symbol: 'BINANCE:BONKUSDT' },
-    { containerId: 'widget-FLOKI', symbol: 'BINANCE:FLOKIUSDT' },	
-    { containerId: 'widget-ZRC', symbol: 'BITGET:ZRCUSDT' }	
+    { containerId: 'widget-FLOKI', symbol: 'BINANCE:FLOKIUSDT' },
+    { containerId: 'widget-TRUMP', symbol: 'TRUMPUSDT' },
+    { containerId: 'widget-MELANIA', symbol: 'MELANIAUSDT' },	
+    { containerId: 'widget-APT', symbol: 'BINANCE:APTUSDT' },	
+    { containerId: 'widget-ZRO', symbol: 'BINANCE:ZROUSDT' },  
+    { containerId: 'widget-APE', symbol: 'BINANCE:APEUSDT' },		   
+    { containerId: 'widget-PEAQ', symbol: 'BITGET:PEAQUSDT' }, 
+    { containerId: 'widget-IP', symbol: 'IPUSDT' },	
+    { containerId: 'widget-STRK', symbol: 'BINANCE:STRKUSDT' },
+  
+    { containerId: 'widget-ZEN', symbol: 'ZENUSDT' },	
+    { containerId: 'widget-DASH', symbol: 'DASHUSDT' },
+    { containerId: 'widget-XMR', symbol: 'XMRUSDT' },
+    { containerId: 'widget-ZEC', symbol: 'ZECUSDT' },		
+    { containerId: 'widget-DGB', symbol: 'DGBUSDT' },	
+    { containerId: 'widget-PIVX', symbol: 'PIVXUSDT' },	
+    { containerId: 'widget-RVN', symbol: 'RVNUSDT' },	
 	
 	
 	
-	
-  ];
+  // Добавьте больше widgetParams здесь
+];
 
-  widgetParams.forEach(params => {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
-    script.async = true;
+let currentIndex = 0;
+const itemsPerPage = 12;
+let currentPage = 1;
 
-    const config = {
-      symbol: params.symbol,
-      height: 220,
-      locale: "en",
-      dateRange: "1M",
-      colorTheme: "dark",
-      trendLineColor: "#37a6ef",
-      underLineColor: "rgba(55, 166, 239, 0.15)",
-      isTransparent: false,
-      autosize: false,
-      largeChartUrl: ""
-    };
+function createWidgetContainer(containerId) {
+  const container = document.createElement('div');
+  container.className = 's12 m6 l3';
+  container.id = containerId;
+  document.getElementById('widget-container').appendChild(container);
+}
 
-    script.innerHTML = JSON.stringify(config);
-    document.getElementById(params.containerId).appendChild(script);
+function createTradingViewWidget(containerId, symbol) {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
+  script.async = true;
+
+  const config = {
+    symbol: symbol,
+    height: 220,
+    locale: "en",
+    dateRange: "1M",
+    colorTheme: "dark",
+    trendLineColor: "#37a6ef",
+    underLineColor: "rgba(55, 166, 239, 0.15)",
+    isTransparent: false,
+    autosize: false,
+    largeChartUrl: ""
+  };
+
+  script.innerHTML = JSON.stringify(config);
+  document.getElementById(containerId).appendChild(script);
+}
+
+function loadPage(page) {
+  document.getElementById('widget-container').innerHTML = '';
+  currentIndex = (page - 1) * itemsPerPage;
+  for (let i = 0; i < itemsPerPage; i++) {
+    if (currentIndex >= widgetParams.length) {
+      break;
+    }
+    createWidgetContainer(widgetParams[currentIndex].containerId);
+    createTradingViewWidget(widgetParams[currentIndex].containerId, widgetParams[currentIndex].symbol);
+    currentIndex++;
+  }
+  currentPage = page;
+  updatePagination();
+}
+
+function createPagination() {
+  const totalPages = Math.ceil(widgetParams.length / itemsPerPage);
+  const paginationContainer = document.getElementById('pagination');
+  paginationContainer.innerHTML = '';
+
+  for (let i = 1; i <= totalPages; i++) {
+    const button = document.createElement('button');
+    button.className = 'circle';
+    button.innerText = i;
+    button.addEventListener('click', () => loadPage(i));
+    paginationContainer.appendChild(button);
+  }
+
+  // Add the load-more button at the end of the pagination buttons
+  const loadMoreButton = document.createElement('button');
+  loadMoreButton.className = 'circle';
+  loadMoreButton.id = 'load-more';
+  loadMoreButton.innerHTML = '<i>expand_all</i>';
+  loadMoreButton.addEventListener('click', loadMoreWidgets);
+  paginationContainer.appendChild(loadMoreButton);
+}
+
+function updatePagination() {
+  const buttons = document.querySelectorAll('.pagination .circle');
+  buttons.forEach(button => {
+    button.classList.remove('fill');
+    if (parseInt(button.innerText) === currentPage) {
+      button.classList.add('fill');
+    }
   });
+}
+
+function loadMoreWidgets() {
+  const remainingWidgets = widgetParams.length - currentIndex;
+  const widgetsToLoad = Math.min(itemsPerPage, remainingWidgets);
+
+  for (let i = 0; i < widgetsToLoad; i++) {
+    createWidgetContainer(widgetParams[currentIndex].containerId);
+    createTradingViewWidget(widgetParams[currentIndex].containerId, widgetParams[currentIndex].symbol);
+    currentIndex++;
+  }
+
+  if (currentIndex >= widgetParams.length) {
+    document.getElementById('load-more').style.display = 'none';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  createPagination();
+  loadPage(1);
+});
+
 </script>
-
-
-
-
-
-
-
-
-    <nav class="pagination">
-        <button class="circle" id="prev-page"><i>keyboard_arrow_left</i></button>
-        <button class="circle fill" data-section="1">1</button>
-        <button class="circle" data-section="2">2</button>
-        <button class="circle" data-section="3">3</button>
-        <button class="circle" id="next-page"><i>keyboard_arrow_right</i></button>
-        <button class="circle" id="show-all"><i>expand_all</i></button>
-    </nav>
-
-
-    <script>
-        $(document).ready(function() {
-            const sections = $('section');
-            let currentSection = 1;
-
-            function showSection(section) {
-                sections.removeClass('active').removeClass('show-all');
-                $('#section' + section).addClass('active');
-
-                $('.pagination button[data-section]').removeClass('fill');
-                $('.pagination button[data-section="' + section + '"]').addClass('fill');
-
-                currentSection = section;
-            }
-
-            function showAllSections() {
-                sections.addClass('show-all');
-                $('.pagination button[data-section]').removeClass('fill');
-                $('#show-all').addClass('fill');
-            }
-
-            $('.pagination button[data-section]').on('click', function() {
-                const section = $(this).data('section');
-                showSection(section);
-            });
-
-            $('#prev-page').on('click', function() {
-                if (currentSection > 1) {
-                    showSection(currentSection - 1);
-                }
-            });
-
-            $('#next-page').on('click', function() {
-                if (currentSection < sections.length) {
-                    showSection(currentSection + 1);
-                }
-            });
-
-            $('#show-all').on('click', function() {
-                showAllSections();
-            });
-
-            // Initialize the first section
-            showSection(1);
-        });
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</main>
-<nav id="nav-0"> </nav> 
-<script src="assets/modules.js"></script>
 </body>
 </html>

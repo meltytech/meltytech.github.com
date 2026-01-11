@@ -1,0 +1,267 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" content="notranslate">
+    <title>MELTY</title>
+	  <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+<link href="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.css" rel="stylesheet">
+<script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+<script src="assets/dark.js">	</script> 
+<link href="assets/style.css" rel="stylesheet">
+    <style>
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        section.show-all {
+            display: block;
+        }
+        .pagination {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .circle {
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .fill {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+
+
+
+
+	
+ </head>
+<body class="dark">
+
+<nav id="nav-1" class="drawer left l scroll"> </nav>
+<nav id="nav-2" class="left m scroll"> </nav>
+<nav id="nav-3" class="bottom s"> </nav> 
+<header id="nav-4" class="fixed responsive max surface"> </header> 
+
+<main class="responsive max">
+
+<div></div>
+
+	<section class="active" id="section1">
+
+<div class="grid">
+  <div class="s12 m6 l3" id="widget-BTC"></div>
+  <div class="s12 m6 l3" id="widget-ETH"></div>
+  <div class="s12 m6 l3" id="widget-LTC"></div>
+  <div class="s12 m6 l3" id="widget-XRP"></div>
+  <div class="s12 m6 l3" id="widget-TRX"></div>
+  <div class="s12 m6 l3" id="widget-DOGE"></div>
+  <div class="s12 m6 l3" id="widget-BNB"></div>
+  <div class="s12 m6 l3" id="widget-TON"></div>
+  <div class="s12 m6 l3" id="widget-BGB"></div>
+  <div class="s12 m6 l3" id="widget-SOL"></div>
+  <div class="s12 m6 l3" id="widget-ADA"></div>
+  <div class="s12 m6 l3" id="widget-XLM"></div>
+</div>
+
+    </section>
+		
+    <section id="section2">
+
+<div class="grid">
+  <div class="s12 m6 l3" id="widget-NOT"></div>
+  <div class="s12 m6 l3" id="widget-DOGS"></div>
+  <div class="s12 m6 l3" id="widget-HMSTR"></div>
+  <div class="s12 m6 l3" id="widget-CATS"></div>
+  <div class="s12 m6 l3" id="widget-X"></div>
+  <div class="s12 m6 l3" id="widget-CATI"></div>
+  <div class="s12 m6 l3" id="widget-MEMEFI"></div>
+<div class="s12 m6 l3" id="widget-MAJOR"></div>   
+<div class="s12 m6 l3" id="widget-GOATS"></div>  
+  <div class="s12 m6 l3" id="widget-TOMA"></div>
+  <div class="s12 m6 l3" id="widget-DUCK"></div>
+  <div class="s12 m6 l3" id="widget-NOTPX"></div>
+ 
+  
+</div>
+
+    </section>
+	
+    <section id="section3">
+
+<div class="grid">
+  <div class="s12 m6 l3" id="widget-SHIB"></div>
+  <div class="s12 m6 l3" id="widget-PEPE"></div>
+  <div class="s12 m6 l3" id="widget-BONK"></div>
+   <div class="s12 m6 l3" id="widget-FLOKI"></div>
+    <div class="s12 m6 l3" id="widget-ZRC"></div> 
+  <div class="s12 m6 l3" id="widget-PEAQ"></div>
+
+
+	
+</div>
+
+    </section>
+
+
+
+
+<script type="text/javascript">
+  const widgetParams = [
+    { containerId: 'widget-BTC', symbol: 'BTCUSD' },
+    { containerId: 'widget-ETH', symbol: 'ETHUSD' },
+    { containerId: 'widget-LTC', symbol: 'LTCUSD' },
+    { containerId: 'widget-XRP', symbol: 'XRPUSD' },
+    { containerId: 'widget-TRX', symbol: 'TRXUSD' },
+    { containerId: 'widget-DOGE', symbol: 'DOGEUSD' },
+    { containerId: 'widget-BNB', symbol: 'BNBUSD' },
+    { containerId: 'widget-TON', symbol: 'TONUSD' },
+    { containerId: 'widget-BGB', symbol: 'BGBUSDT' },
+    { containerId: 'widget-SOL', symbol: 'SOLUSDT' },
+    { containerId: 'widget-ADA', symbol: 'BINANCE:ADAUSDT' },
+    { containerId: 'widget-XLM', symbol: 'BINANCE:XLMUSDT' },	
+	
+    { containerId: 'widget-NOT', symbol: 'NOTUSDT' },
+    { containerId: 'widget-DOGS', symbol: 'BINANCE:DOGSUSDT' },
+    { containerId: 'widget-HMSTR', symbol: 'BINANCE:HMSTRUSDT' },
+    { containerId: 'widget-CATS', symbol: 'BITGET:CATSUSDT' },
+    { containerId: 'widget-X', symbol: 'XUSDT' },
+    { containerId: 'widget-CATI', symbol: 'BINANCE:CATIUSDT' },
+    { containerId: 'widget-MEMEFI', symbol: 'MEMEFIUSDT' },	
+    { containerId: 'widget-MAJOR', symbol: 'MAJORUSDT' },	
+    { containerId: 'widget-GOATS', symbol: 'GOATSUSDT' },	
+	
+    { containerId: 'widget-PEAQ', symbol: 'BITGET:PEAQUSDT' },
+    { containerId: 'widget-TOMA', symbol: 'TOMAUSDT' },
+    { containerId: 'widget-DUCK', symbol: 'DUCKUSDT' },
+    { containerId: 'widget-NOTPX', symbol: 'NOTPXUSDT' },
+
+
+	
+    { containerId: 'widget-SHIB', symbol: 'BINANCE:SHIBUSDT' },
+    { containerId: 'widget-PEPE', symbol: 'BINANCE:PEPEUSDT' },
+    { containerId: 'widget-BONK', symbol: 'BINANCE:BONKUSDT' },
+    { containerId: 'widget-FLOKI', symbol: 'BINANCE:FLOKIUSDT' },	
+    { containerId: 'widget-ZRC', symbol: 'BITGET:ZRCUSDT' }	
+	
+	
+	
+	
+  ];
+
+  widgetParams.forEach(params => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
+    script.async = true;
+
+    const config = {
+      symbol: params.symbol,
+      height: 220,
+      locale: "en",
+      dateRange: "1M",
+      colorTheme: "dark",
+      trendLineColor: "#37a6ef",
+      underLineColor: "rgba(55, 166, 239, 0.15)",
+      isTransparent: false,
+      autosize: false,
+      largeChartUrl: ""
+    };
+
+    script.innerHTML = JSON.stringify(config);
+    document.getElementById(params.containerId).appendChild(script);
+  });
+</script>
+
+
+
+
+
+
+
+
+    <nav class="pagination">
+        <button class="circle" id="prev-page"><i>keyboard_arrow_left</i></button>
+        <button class="circle fill" data-section="1">1</button>
+        <button class="circle" data-section="2">2</button>
+        <button class="circle" data-section="3">3</button>
+        <button class="circle" id="next-page"><i>keyboard_arrow_right</i></button>
+        <button class="circle" id="show-all"><i>expand_all</i></button>
+    </nav>
+
+
+    <script>
+        $(document).ready(function() {
+            const sections = $('section');
+            let currentSection = 1;
+
+            function showSection(section) {
+                sections.removeClass('active').removeClass('show-all');
+                $('#section' + section).addClass('active');
+
+                $('.pagination button[data-section]').removeClass('fill');
+                $('.pagination button[data-section="' + section + '"]').addClass('fill');
+
+                currentSection = section;
+            }
+
+            function showAllSections() {
+                sections.addClass('show-all');
+                $('.pagination button[data-section]').removeClass('fill');
+                $('#show-all').addClass('fill');
+            }
+
+            $('.pagination button[data-section]').on('click', function() {
+                const section = $(this).data('section');
+                showSection(section);
+            });
+
+            $('#prev-page').on('click', function() {
+                if (currentSection > 1) {
+                    showSection(currentSection - 1);
+                }
+            });
+
+            $('#next-page').on('click', function() {
+                if (currentSection < sections.length) {
+                    showSection(currentSection + 1);
+                }
+            });
+
+            $('#show-all').on('click', function() {
+                showAllSections();
+            });
+
+            // Initialize the first section
+            showSection(1);
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+<nav id="nav-0"> </nav> 
+<script src="assets/modules.js"></script>
+</body>
+</html>

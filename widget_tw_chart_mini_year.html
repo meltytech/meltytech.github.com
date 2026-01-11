@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MELTY</title>
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.6.13/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/dark.js"></script>
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="dark">
+    <nav id="nav-1" class="drawer left l scroll"></nav>
+    <nav id="nav-2" class="left m scroll"></nav>
+    <nav id="nav-3" class="bottom s"></nav>
+    <header id="nav-4" class="fixed responsive max surface"></header>
+
+    <main class="responsive max">
+        <div></div>
+        <div class="grid" id="widget-container"></div>
+        <nav class="pagination">
+            <button id="load-more">Показать больше</button>
+        </nav>
+
+        <script type="text/javascript">
+            const widgetParams = [
+                { symbol: 'BTC' },
+                { symbol: 'ETH' },
+                { symbol: 'LTC' },
+                { symbol: 'XRP' },
+                { symbol: 'TRX' },
+                { symbol: 'DOGE' },
+                { symbol: 'BNB' },
+                { symbol: 'BCH' },
+				{ symbol: 'SOL' },				
+                { symbol: 'ADA' },				
+                { symbol: 'XLM' },
+                { symbol: 'XMR' },				
+                { symbol: 'ZEC' },				
+                { symbol: 'ZEN' },				
+                { symbol: 'BGB' },				
+                { symbol: 'DASH' },				
+                { symbol: 'MIOTA' },				
+                { symbol: 'DCR' },				
+                { symbol: 'ZRX' },				
+                { symbol: 'DGB' },				
+                { symbol: 'ELF' },				
+                { symbol: 'STORJ' },				
+                { symbol: 'STEEM' },				
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				
+                { symbol: 'TON' },				
+                { symbol: 'NOT' },				
+                { symbol: 'DOGS' },								
+                { symbol: 'X' }
+                // Добавьте остальные виджеты тут...
+            ];
+
+            let currentIndex = 0;
+            const itemsPerPage = 4;
+
+            function createCryptoCompareWidget(symbol) {
+                const container = document.createElement('div');
+                container.className = 's12 m6 l3';
+
+                const script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = `https://widgets.cryptocompare.com/serve/v2/coin/chart?fsym=${symbol}&tsym=USD&period=1Y`;
+                script.async = true;
+
+                container.appendChild(script);
+                document.getElementById('widget-container').appendChild(container);
+            }
+
+            function loadMoreWidgets() {
+                for (let i = 0; i < itemsPerPage; i++) {
+                    if (currentIndex >= widgetParams.length) {
+                        document.getElementById('load-more').style.display = 'none';
+                        break;
+                    }
+                    createCryptoCompareWidget(widgetParams[currentIndex].symbol);
+                    currentIndex++;
+                }
+            }
+
+            document.getElementById('load-more').addEventListener('click', loadMoreWidgets);
+
+            // Инициализируем первую загрузку виджетов
+            loadMoreWidgets();
+        </script>
+    </main>
+    <nav id="nav-0"></nav>
+    <script src="assets/modules.js"></script>
+</body>
+</html>
